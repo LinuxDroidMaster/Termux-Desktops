@@ -1,7 +1,7 @@
 # Termux Desktops
 Collection of scripts to launch Desktops with audio in Termux X11. You have also all the information needed to install your prefered Linux Distro and connect to it in the following steps. 
 
-# Index
+# 📚 Index
 * [First steps](#first-steps)
 * [Installing Desktops](#installing-desktops)
 * [Running the Desktops to use them with Termux X11](#running-desktops)
@@ -10,7 +10,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 ---  
 <br>
 
-# First steps <a name=first-steps></a>
+# 1️⃣ First steps <a name=first-steps></a>
 We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
 * [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
