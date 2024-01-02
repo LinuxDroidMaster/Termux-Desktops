@@ -49,7 +49,7 @@ The steps are described in the video linked in the previous point.
 1. Install needed packages
 ```
 apt update -y
-apt install sudo nano adduser usermod -y
+apt install sudo nano adduser -y
 ```
 2. Create an user
 ```
