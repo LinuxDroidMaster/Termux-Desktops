@@ -11,7 +11,7 @@ termux-x11 :0 >/dev/null &
 sleep 3
 
 # Login in PRoot Environment. Do some initialization for PulseAudio, /tmp directory
-# and run xfce as user galaxy.
+# and run LXDE as user droidmaster.
 # See also: https://github.com/termux/proot-distro
 # Argument -- acts as terminator of proot-distro login options processing.
 # All arguments behind it would not be treated as options of PRoot Distro.
