@@ -63,7 +63,7 @@ sudo whoami
 ---  
 <br>
 
-# Installing Desktops  
+# ⚙️ Installing Desktops  
 
 I have installed 3 different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
 
@@ -92,7 +92,7 @@ proot-distro login debian --user droidmaster
 sudo apt install kde-plasma-desktop
 ```
 
-# Running the Desktops to use them with Termux X11
+# 💻 Running the Desktops for use with Termux X11
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
 Just download the one corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
@@ -102,7 +102,7 @@ chmod +x startxfce4_debian.sh
 ./startxfce4_debian.sh
 ```
 
-### Download scripts easily: 
+# ⬇️ Download scripts easily: 
 * startxfce4_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_debian.sh
