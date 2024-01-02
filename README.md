@@ -62,8 +62,6 @@ sudo whoami
 
 ---  
 <br>
-<br>
-<br>
 
 # Installing Desktops  
 
