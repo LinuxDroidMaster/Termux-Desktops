@@ -7,6 +7,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * [Running the Desktops to use them with Termux X11](#running-desktops)
 * [Download scripts easily](#easy-download)
 
+---  
 <br>
 
 # First steps <a name=first-steps></a>
@@ -100,6 +101,9 @@ proot-distro login debian --user droidmaster
 sudo apt install kde-plasma-desktop
 ```
 
+---  
+<br>
+
 # 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
@@ -109,6 +113,9 @@ Just download the one corresponding to the Desktop you have installaded, give it
 chmod +x startxfce4_debian.sh
 ./startxfce4_debian.sh
 ```
+
+---  
+<br>
 
 # ⬇️ Download scripts easily: <a name=easy-download></a> 
 * startxfce4_debian.sh
