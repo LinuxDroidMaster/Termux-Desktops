@@ -107,7 +107,14 @@ sudo apt install kde-plasma-desktop
 # 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
-Just download the one corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+```
+
+Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
 ```
 # Download the script to Termux
 chmod +x startxfce4_debian.sh
