@@ -15,7 +15,7 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 
 * [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
-* [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=OMJAyq5NHp0) (pending)
+* [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=mXkXzFqSeYE)
 
 * [[Video] How to install a Linux distro on Android](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
