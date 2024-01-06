@@ -6,6 +6,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * [Installing Desktops](#installing-desktops)
 * [Running the Desktops to use them with Termux X11](#running-desktops)
 * [Download scripts easily](#easy-download)
+* [Customizations - Themes](#customizations)
 
 ---  
 <br>
@@ -136,4 +137,11 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/sta
 * startkde_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startkde_debian.sh
+```
+
+# 🎨 Customizations <a name=customizations></a>
+Work In Progress
+* How to install nerd fonts (this allows you to have icons in the terminal):
+```
+bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
