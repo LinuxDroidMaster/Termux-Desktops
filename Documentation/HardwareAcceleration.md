@@ -53,12 +53,19 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 glmark2
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
+![GLMARK2 comparison](./images/glmark2_comparison.png)
 
 * GLXGEARS tested during 30 seconds with the following commands (runned 1 time and waited for 6 output messages)
 ```
 glxgears
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
 ```
+* SuperTuxKart tested during 30 seconds with the following commands (runned 1 time)
+```
+glxgears
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
+```
+![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
 
 * [Firefox Aquarium WebGL Benchmark](https://webglsamples.org/aquarium/aquarium.html) tested during 30 seconds with the following commands (runned 1 time in a 1024x1024 canvas).
 > [!NOTE]  
@@ -68,3 +75,4 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
 firefox-esr
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 firefox-esr
 ```
+![WEB GL Aquarium on Firefox](./images/webglaquarium.png)
