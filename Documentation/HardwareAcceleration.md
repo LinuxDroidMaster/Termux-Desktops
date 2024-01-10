@@ -10,8 +10,14 @@ pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android
 
 ## 2. Initialize VIRGL server in Termux: 
 Before login to proot and use hardware acceleration you need to start the virgl server: 
-```
 
+* If you have a Snapdragon CPU:
+```
+MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &
+```
+* If not:
+```
+virgl_test_server_android &
 ```
 
 ## 3. In proot distro 
