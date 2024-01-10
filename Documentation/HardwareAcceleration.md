@@ -34,3 +34,14 @@ For example:
 ```
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
+
+# Performance results 
+| Software| No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
+| --- | --- | --- | --- |
+| GLMAKR2 | No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
+
+
+* GLMARK2 tested during 30 seconds with the following command
+```
+glmark2
+```
