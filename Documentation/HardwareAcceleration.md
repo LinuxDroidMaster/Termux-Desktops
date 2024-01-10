@@ -1,6 +1,6 @@
 # Hardware Acceleration in Termux
-
-I would like to include here all the info I got while I'm still researching the topic. 
+> [!WARNING]  
+> Work In Progress. I would like to include here all the info I got while I'm still researching the topic. 
 
 ## 1. Install packages
 You need to install the following packages in Termux: 
