@@ -6,6 +6,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * [Installing Desktops](#installing-desktops)
 * [Running the Desktops to use them with Termux X11](#running-desktops)
 * [Download scripts easily](#easy-download)
+* [Customizations - Themes](#customizations)
 
 ---  
 <br>
@@ -15,7 +16,7 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 
 * [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
-* [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=OMJAyq5NHp0) (pending)
+* [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=mXkXzFqSeYE)
 
 * [[Video] How to install a Linux distro on Android](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
@@ -49,7 +50,7 @@ The steps are described in the video linked in the previous point.
 1. Install needed packages
 ```
 apt update -y
-apt install sudo nano adduser usermod -y
+apt install sudo nano adduser -y
 ```
 2. Create an user
 ```
@@ -107,7 +108,14 @@ sudo apt install kde-plasma-desktop
 # 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
-Just download the one corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+```
+
+Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
 ```
 # Download the script to Termux
 chmod +x startxfce4_debian.sh
@@ -129,4 +137,11 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/sta
 * startkde_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startkde_debian.sh
+```
+
+# 🎨 Customizations <a name=customizations></a>
+Work In Progress
+* How to install nerd fonts (this allows you to have icons in the terminal):
+```
+bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
