@@ -11,11 +11,11 @@ pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android
 ## 2. Initialize VIRGL server in Termux: 
 Before login to proot and use hardware acceleration you need to start the virgl server: 
 
-* If you have a Snapdragon CPU:
+* If you have a Snapdragon CPU (ZINK):
 ```
 MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &
 ```
-* If not:
+* If not (VIRGL):
 ```
 virgl_test_server_android &
 ```
@@ -36,12 +36,35 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
 
 # Performance results 
-| Software| No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
+> [!IMPORTANT]  
+> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
+
+
+| Software | No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
 | --- | --- | --- | --- |
-| GLMAKR2 | No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
+| GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)|
+| GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) |
+| SUPERTUXKART (average fps aprox.) | 5 (0%) | Seg Fault Error (crash) | 30 (500%) |
+| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  |
 
 
-* GLMARK2 tested during 30 seconds with the following command
+* GLMARK2 tested during 30 seconds with the following commands (runned 2 times)
 ```
 glmark2
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
+```
+
+* GLXGEARS tested during 30 seconds with the following commands (runned 1 time and waited for 6 output messages)
+```
+glxgears
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
+```
+
+* [Firefox Aquarium WebGL Benchmark](https://webglsamples.org/aquarium/aquarium.html) tested during 30 seconds with the following commands (runned 1 time in a 1024x1024 canvas).
+> [!NOTE]  
+> You need to [enable WebGL in Firefox](https://help.interplaylearning.com/en/help/how-to-enable-webgl-in-firefox) to use the GPU
+  
+```
+firefox-esr
+GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 firefox-esr
 ```
