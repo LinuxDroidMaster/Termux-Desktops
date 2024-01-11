@@ -48,19 +48,19 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 | Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  |
 
 
-* GLMARK2 tested during 30 seconds with the following commands (runned 2 times)
+* GLMARK2 tested during 30 seconds with the following commands (run 2 times)
 ```
 glmark2
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
 ![GLMARK2 comparison](./images/glmark2_comparison.png)
 
-* GLXGEARS tested during 30 seconds with the following commands (runned 1 time and waited for 6 output messages)
+* GLXGEARS tested during 30 seconds with the following commands (run 1 time and waited for 6 output messages)
 ```
 glxgears
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
 ```
-* SuperTuxKart tested during 30 seconds with the following commands (runned 1 time)
+* SuperTuxKart tested during 30 seconds with the following commands (run 1 time)
 ```
 glxgears
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
