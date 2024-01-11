@@ -39,6 +39,7 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 > [!IMPORTANT]  
 > All this tests were done in a proot distro environment with Debian and a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
 
+Device used: Lenovo Legion Y700 2022 model (Snapdragon 875 - Adreno 650)
 
 | Software | No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
 | --- | --- | --- | --- |
