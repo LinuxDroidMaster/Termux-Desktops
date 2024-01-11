@@ -7,6 +7,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * [Running the Desktops to use them with Termux X11](#running-desktops)
 * [Download scripts easily](#easy-download)
 * [Customizations - Themes](#customizations)
+* ⚠️WIP [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
 ---  
 <br>
