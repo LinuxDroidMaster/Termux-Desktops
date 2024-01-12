@@ -37,17 +37,18 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 
 # Performance results 
 > [!IMPORTANT]  
-> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
+> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop and in Termux with a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
 
 Device used: Lenovo Legion Y700 2022 model (Snapdragon 875 - Adreno 650)
 
-| Software | No Hardware Acceleration | H.A. using VIRGL | H.A. using ZINK (Snapdragon) |
-| --- | --- | --- | --- |
-| GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)|
-| GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) |
-| SUPERTUXKART (average fps aprox.) | 5 (0%) | Seg Fault Error (crash) | 30 (500%) |
-| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  |
+| Software | No Hardware Acceleration | H.A. using VIRGL in proot | H.A. using ZINK (Snapdragon) in proot | H.A. using ZINK (Snapdragon) in Termux |
+| --- | --- | --- | --- | --- |
+| GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)| 180 (143%)|
+| GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) | 324 (121%) |
+| SUPERTUXKART (average fps aprox.) | 5 (0%) | Seg Fault Error (crash) | 30 (500%) | Couldn't test |
+| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  | Couldn't test |
 
+Conclusions: I would like to do more tests but it seems that within proot-distro the hardware acceleration is weaker although in the case of a 3D game like supertuxkart it helps a lot.
 
 * GLMARK2 tested during 30 seconds with the following commands (run 2 times)
 ```
