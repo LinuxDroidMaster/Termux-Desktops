@@ -46,7 +46,7 @@ Device used: Lenovo Legion Y700 2022 model (Snapdragon 875 - Adreno 650)
 | GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)| 180 (143%)|
 | GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) | 324 (121%) |
 | SUPERTUXKART (average fps aprox.) | 5 (0%) | Seg Fault Error (crash) | 30 (500%) | Couldn't test |
-| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  | Couldn't test |
+| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  | 37 (825%) |
 
 Conclusions: I would like to do more tests but it seems that within proot-distro the hardware acceleration is weaker although in the case of a 3D game like supertuxkart it helps a lot.
 
