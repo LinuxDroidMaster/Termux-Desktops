@@ -116,7 +116,7 @@ pkg install x11-repo
 pkg install termux-x11-nightly
 ```
 
-Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it: 
+Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
 ```
 # Download the script to Termux
 chmod +x startxfce4_debian.sh
