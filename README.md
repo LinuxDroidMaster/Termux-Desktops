@@ -127,6 +127,10 @@ chmod +x startxfce4_debian.sh
 <br>
 
 # ⬇️ Download scripts easily: <a name=easy-download></a> 
+
+> [!NOTE]  
+> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
+
 * startxfce4_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_debian.sh
