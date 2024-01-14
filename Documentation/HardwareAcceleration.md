@@ -1,6 +1,6 @@
 # Hardware Acceleration in Termux
 > [!WARNING]  
-> Work In Progress. I would like to include here all the info I got while I'm still researching the topic. 
+> Work In Progress. I would like to include here all the info I got while I'm still researching the topic. If you find any errors  or misconceptions, please comment on Youtube, Telegram or open an issue on this Github
 
 ## 1. Install packages
 You need to install the following packages in Termux: 
@@ -9,13 +9,13 @@ pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android
 ```
 
 ## 2. Initialize VIRGL server in Termux: 
-Before login to proot and use hardware acceleration you need to start the virgl server: 
+Before login to proot and use hardware acceleration you need to start the graphical server: 
 
-* If you have a Snapdragon CPU (ZINK):
+* Vulkan (ZINK):
 ```
 MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &
 ```
-* If not (VIRGL):
+* OpenGL (VIRGL):
 ```
 virgl_test_server_android &
 ```
