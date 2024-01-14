@@ -19,6 +19,8 @@ MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.
 ```
 virgl_test_server_android &
 ```
+* [Pending to investigate: Turnip (Adreno GPU/Snapdragon compatible only)](https://www.reddit.com/r/termux/comments/16dfdsw/proot_only_dri3_patch_freedreno_turnip_driver/)
+
 
 ## 3. In proot distro 
 Run the Desktop with my script (if you do manually take in to account that you need to share the tmp dir to make it work): 
@@ -41,7 +43,7 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 
 Device used: Lenovo Legion Y700 2022 model (Snapdragon 875 - Adreno 650)
 
-| Software | No Hardware Acceleration | H.A. using VIRGL in proot | H.A. using ZINK (Snapdragon) in proot | H.A. using ZINK (Snapdragon) in Termux |
+| Software | No Hardware Acceleration | H.A. using VIRGL in proot | H.A. using ZINK in proot | H.A. using ZINK in Termux |
 | --- | --- | --- | --- | --- |
 | GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)| 180 (143%)|
 | GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) | 324 (121%) |
