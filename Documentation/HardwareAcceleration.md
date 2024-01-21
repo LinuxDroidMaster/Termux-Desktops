@@ -5,7 +5,7 @@
 ## 1. Install packages
 You need to install the following packages in Termux: 
 ```
-pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android
+pkg install mesa-zink virglrenderer-mesa-zink vulkan-loader-android virglrenderer-android
 ```
 
 ## 2. Initialize VIRGL server in Termux: 
