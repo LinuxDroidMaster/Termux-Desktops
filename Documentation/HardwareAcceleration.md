@@ -38,6 +38,9 @@ GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
 
 # Performance results 
+> [!WARNING]  
+> I need to redo all the tests, right now the results are not reliable.
+
 > [!IMPORTANT]  
 > All this tests were done in a proot distro environment with Debian and a XFCE4 desktop and in Termux with a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
 
