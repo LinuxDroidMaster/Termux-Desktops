@@ -114,6 +114,7 @@ First you need to install the following packages in Termux:
 pkg update
 pkg install x11-repo
 pkg install termux-x11-nightly
+pkg install pulseaudio
 ```
 
 Then, you just need to download the script corresponding to the Desktop you have installaded, give it permissions to execute it and run it (in Termux, not in proot-distro): 
