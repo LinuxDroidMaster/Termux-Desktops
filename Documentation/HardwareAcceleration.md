@@ -2,6 +2,8 @@
 > [!WARNING]  
 > Work In Progress. I would like to include here all the info I got while I'm still researching the topic. If you find any errors  or misconceptions, please comment on Youtube, Telegram or open an issue on this Github
 
+[Video where I explain hardware acceleration 😊](https://www.youtube.com/watch?v=fgGOizUDQpY)
+
 ## 1. Install packages
 You need to install the following packages in Termux: 
 ```
