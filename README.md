@@ -19,11 +19,13 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 
 * [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=mXkXzFqSeYE)
 
+* [[Video] How to install a COMPLETE Linux environtment on ANDROID - Customizing XFCE4 - Neon theme - No Root](https://www.youtube.com/watch?v=rDHyPw_7ETs)
+
 * [[Video] How to install a Linux distro on Android](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
 
 <details>
-<summary><strong> How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
+<summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>
 
 You can check the video described in the First Steps section. The written steps are the following ones: 
 
@@ -44,7 +46,7 @@ proot-distro login debian
 </details>
 
 <details>
-<summary><strong>Create an user with sudo privileges</summary></strong>
+<summary><strong>[Commands ]Create an user with sudo privileges</summary></strong>
 
 The steps are described in the video linked in the previous point. 
 
@@ -76,7 +78,7 @@ sudo whoami
 
 # ⚙️ Installing Desktops <a name=installing-desktops></a> 
 
-I have installed 3 different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
+I have installed different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
 
 > [!NOTE]
 > In the videos I'm using VNC but with Termux X11 installing the tigervnc server and dbus is no longer required.
@@ -94,6 +96,19 @@ sudo apt install xfce4
 # Commands: 
 proot-distro login debian --user droidmaster
 sudo apt install lxde
+```
+
+* [[Video] How to install Cinnamon - Pending]()
+```
+# Commands: 
+proot-distro login debian --user droidmaster
+sudo apt install cinnamon -y
+```
+
+* [[Video] How to install GNOME - Pending]()
+```
+# Commands: 
+Pending (next week)
 ```
 
 * [[Video] How to install KDE Plasma](https://www.youtube.com/watch?v=fru4SWvUowI&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=2)  - Not recommended due to performance issues (KDE Plasma requires more resources)
@@ -140,13 +155,18 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/sta
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startlxde_debian.sh
 ```
+
+* startcinnamon_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startcinnamon_debian.sh
+```
+
 * startkde_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startkde_debian.sh
 ```
 
 # 🎨 Customizations <a name=customizations></a>
-Work In Progress
 * How to install nerd fonts (this allows you to have icons in the terminal):
 ```
 bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
