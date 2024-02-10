@@ -108,7 +108,11 @@ sudo apt install cinnamon -y
 * [[Video] How to install GNOME - Pending]()
 ```
 # Commands: 
-Pending (next week)
+sudo apt install dbus-x11 nano gnome gnome-shell gnome-terminal gnome-tweaks gnome-software nautilus gnome-shell-extension-manager gedit tigervnc-tools gnupg2 -y
+```
+```
+for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file
+done
 ```
 
 * [[Video] How to install KDE Plasma](https://www.youtube.com/watch?v=fru4SWvUowI&list=PL4worxVHtqXo8EPHfLcoy5tPwjVSaqdB5&index=2)  - Not recommended due to performance issues (KDE Plasma requires more resources)
@@ -147,10 +151,16 @@ chmod +x startxfce4_debian.sh
 > [!NOTE]  
 > By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
 
+* ⚠️Testing: startgnome_debian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startgnome_debian.sh
+```
+
 * startxfce4_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_debian.sh
 ```
+
 * startlxde_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startlxde_debian.sh
