@@ -162,7 +162,7 @@ chmod +x startxfce4_debian.sh
 > [!NOTE]  
 > By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
 
-* ⚠️Testing: startgnome_debian.sh
+* startgnome_debian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startgnome_debian.sh
 ```
