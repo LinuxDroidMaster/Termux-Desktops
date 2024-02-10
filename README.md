@@ -88,6 +88,8 @@ I have installed different desktops, if you want me to test any other just leave
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
+```
+```
 sudo apt install xfce4
 ```
 
@@ -95,6 +97,8 @@ sudo apt install xfce4
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
+```
+```
 sudo apt install lxde
 ```
 
@@ -102,12 +106,17 @@ sudo apt install lxde
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
+```
+```
 sudo apt install cinnamon -y
 ```
 
 * [[Video] How to install GNOME - Pending]()
 ```
 # Commands: 
+proot-distro login debian --user droidmaster
+```
+```
 sudo apt install dbus-x11 nano gnome gnome-shell gnome-terminal gnome-tweaks gnome-software nautilus gnome-shell-extension-manager gedit tigervnc-tools gnupg2 -y
 ```
 ```
@@ -119,6 +128,8 @@ done
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
+```
+```
 sudo apt install kde-plasma-desktop
 ```
 
