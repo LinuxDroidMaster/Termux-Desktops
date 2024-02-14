@@ -93,7 +93,7 @@ proot-distro login debian --user droidmaster
 sudo apt install xfce4
 ```
 
-* [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
+* [[Video] How to install LXDE](https://www.youtube.com/watch?v=9b9_9YNsCXc)
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
