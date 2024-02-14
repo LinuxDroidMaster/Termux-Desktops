@@ -111,7 +111,7 @@ proot-distro login debian --user droidmaster
 sudo apt install cinnamon -y
 ```
 
-* [[Video] How to install GNOME - Pending]()
+* [[Video] How to install GNOME](https://www.youtube.com/watch?v=XedxyTTHYnI)
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
