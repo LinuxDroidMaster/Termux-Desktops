@@ -29,6 +29,10 @@ It is not needed to initialize any graphical server. Follow the steps described 
 ```
 sudo dpkg -i mesa-vulkan-kgsl_23.3.0-devel-20230905_arm64.deb
 ```
+  In case you want to remove the driver: 
+```
+sudo dpkg -r mesa-vulkan-drivers:arm64
+```
 
 
 ## 3. In proot distro 
