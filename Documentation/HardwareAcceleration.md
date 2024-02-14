@@ -42,13 +42,9 @@ Run the Desktop with my script (if you do manually take in to account that you n
 ```
 
 Once in the Desktop when you want to run a program with hardware acceleration use this before: 
-For VIRGL: 
+For VIRGL and ZINK: 
 ```
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 program
-```
-For ZINK: 
-```
-GALLIUM_DRIVER=zink MESA_GL_VERSION_OVERRIDE=4.0 glmark2
 ```
 For TURNIP: 
 ```
