@@ -42,11 +42,12 @@ Run the Desktop with my script (if you do manually take in to account that you n
 ```
 
 Once in the Desktop when you want to run a program with hardware acceleration use this before: 
-For VIRGL and ZINK: 
+
+* For VIRGL and ZINK (depending on the graphic server you started in Termux it will use ZINK or VIRGL): 
 ```
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 program
 ```
-For TURNIP: 
+* For TURNIP: 
 ```
 MESA_LOADER_DRIVER_OVERRIDE=zink TU_DEBUG=noconform program
 ```
