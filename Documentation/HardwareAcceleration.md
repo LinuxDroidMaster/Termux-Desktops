@@ -1,8 +1,9 @@
 # Hardware Acceleration in Termux
-> [!WARNING]  
-> Work In Progress. I would like to include here all the info I got while I'm still researching the topic. If you find any errors  or misconceptions, please comment on Youtube, Telegram or open an issue on this Github
+> [!NOTE]  
+> I would like to include here all the information I got while I am still researching the subject as the world of hardware acceleration is huge.. If you find any errors  or misconceptions, please comment on Youtube, Telegram or open an issue on this Github
 
-[Video where I explain hardware acceleration 😊](https://www.youtube.com/watch?v=fgGOizUDQpY)
+🔥[[Video] Hardware Acceleration Part 1 - What it is, how it is used (VIRGL AND ZINK)](https://www.youtube.com/watch?v=fgGOizUDQpY)   
+🔥[[Video] Hardware Acceleration Part 2 - (VIRGL, ZINK, TURNIP) - how can you use them - Coming up soon....]()
 
 ## 1. Install packages
 You need to install the following packages in Termux: 
@@ -36,7 +37,7 @@ sudo dpkg -r mesa-vulkan-drivers:arm64
 
 
 ## 3. In proot distro 
-Run the Desktop with my script (if you do manually take in to account that you need to share the tmp dir to make it work): 
+Run the Desktop with my script (if you do manually instead of using my script, take in to account that you need to share the tmp dir to make it work): 
 ```
 ./startxfce4_debian.sh
 ```
@@ -53,46 +54,102 @@ MESA_LOADER_DRIVER_OVERRIDE=zink TU_DEBUG=noconform program
 ```
 
 # Performance results 
-> [!WARNING]  
-> I need to redo all the tests, right now the results are not reliable.
-
 > [!IMPORTANT]  
-> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop and in Termux with a XFCE4 desktop. In brackets I put the % of improvement compared to the worst case scenario.
+> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop.
 
 Device used: Lenovo Legion Y700 2022 model (Snapdragon 870 - Adreno 650)
 
-| Software | No Hardware Acceleration | H.A. using VIRGL in proot | H.A. using ZINK in proot | H.A. using ZINK in Termux |
-| --- | --- | --- | --- | --- |
-| GLMAKR2 (points) | 167 (125.67%) | 90 (21.62%) | 74 (0%)| 180 (143%)|
-| GLXGEARS (average fps) | 406 (178.08%) | 223 (52.73%) | 146 (0%) | 324 (121%) |
-| SUPERTUXKART (average fps aprox.) | 5 (0%) | Seg Fault Error (crash) | 30 (500%) | Couldn't test |
-| Firefox Aquarium Benchmark | 4 (0%) | 22 (450%) | 17 (325%)  | 37 (825%) |
+<table>
+  <thead>
+    <tr>
+      <th scope="col" colspan="5">DEBIAN PROOT (GLMARK2 SCORE - the higher the number the better the performance)</th>
+    </tr>
+    <tr>
+        <th scope="col">RUN</th>
+        <th scope="col">LLVMPIPE</th>
+        <th scope="col">VIRGL</th>
+        <th scope="col">ZINK</th>
+        <th scope="col">TURNIP</th>
+    </tr>
+  </thead>
 
-Conclusions: I would like to do more tests but it seems that within proot-distro the hardware acceleration is weaker although in the case of a 3D game like supertuxkart it helps a lot.
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>93</td>
+      <td>70</td>
+      <td>66</td>
+      <td>198</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>93</td>
+      <td>77</td>
+      <td>66</td>
+      <td>198</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>72</td>
+      <td>70</td>
+      <td>71</td>
+      <td>198</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>94</td>
+      <td>76</td>
+      <td>66</td>
+      <td>197</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>93</td>
+      <td>75</td>
+      <td>67</td>
+      <td>198</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Initialize server</th>
+      <td>Not needed</td>
+      <td>virgl_test_server_android &</td>
+      <td>MESA_NO_ERROR=1 MESA_GL_VERSION_OVERRIDE=4.3COMPAT MESA_GLES_VERSION_OVERRIDE=3.2 GALLIUM_DRIVER=zink ZINK_DESCRIPTORS=lazy virgl_test_server --use-egl-surfaceless --use-gles &</td>
+      <td>Not needed</td>
+    </tr>
+    <tr>
+      <th scope="row">Command used</th>
+      <td>glmkar2</td>
+      <td>GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2</td>
+      <td>GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2</td>
+      <td>MESA_LOADER_DRIVER_OVERRIDE=zink TU_DEBUG=noconform glmark2</td>
+    </tr>
+    <tr>
+      <th scope="row">GLMARK GPU Info</th>
+      <td>llvmpipe</td>
+      <td>virgl (Adreno)</td>
+      <td>virgl(zink Adreno)</td>
+      <td>virgl (Turnip Adreno)</td>
+    </tr>
+  </tfoot>
+</table>
 
-* GLMARK2 tested during 30 seconds with the following commands (run 2 times)
-```
-glmark2
-GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2
-```
-![GLMARK2 comparison](./images/glmark2_comparison.png)
+---
+Other tests I did: 
 
-* GLXGEARS tested during 30 seconds with the following commands (run 1 time and waited for 6 output messages)
-```
-glxgears
-GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
-```
-* SuperTuxKart tested during 30 seconds with the following commands (run 1 time)
-```
-glxgears
-GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glxgears
-```
+* SuperTuxKart tested during 30 seconds
 ![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
 
+---
 * [Firefox Aquarium WebGL Benchmark](https://webglsamples.org/aquarium/aquarium.html) tested during 30 seconds with the following commands (runned 1 time in a 1024x1024 canvas).
+  
 > [!NOTE]  
 > You need to [enable WebGL in Firefox](https://help.interplaylearning.com/en/help/how-to-enable-webgl-in-firefox) to use the GPU
-  
+
+> [!WARNING]  
+> I need to redo the Aquarium tests, right now the results are not reliable.
+
 ```
 firefox-esr
 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 firefox-esr
