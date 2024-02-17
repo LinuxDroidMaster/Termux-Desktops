@@ -64,7 +64,7 @@ To install glmark2:
 # In proot-distro (Debian): sudo apt install glmark2
 ```
 > [!IMPORTANT]  
-> All this tests were done in a proot distro environment with Debian and a XFCE4 desktop.
+> The following tests were done in a proot distro environment with Debian and a XFCE4 desktop.
 
 <table>
   <thead>
@@ -154,7 +154,7 @@ To install glmark2:
 ---
 
 > [!IMPORTANT]  
-> All this tests were done in Termux (NOT in proot-distro) and a XFCE4 desktop.
+> The following tests were done in Termux (NOT in proot-distro) and a XFCE4 desktop.
 
 <table>
   <thead>
