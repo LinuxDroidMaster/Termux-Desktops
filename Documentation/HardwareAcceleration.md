@@ -182,7 +182,7 @@ To install glmark2:
     </tr>
     <tr>
       <td>2</td>
-      <td></td>
+      <td>70</td>
       <td>Error</td>
       <td>92</td>
       <td>122</td>
@@ -190,7 +190,7 @@ To install glmark2:
     </tr>
     <tr>
       <td>3</td>
-      <td></td>
+      <td>69</td>
       <td>Error</td>
       <td>93</td>
       <td>121</td>
@@ -198,7 +198,7 @@ To install glmark2:
     </tr>
     <tr>
       <td>4</td>
-      <td></td>
+      <td>69</td>
       <td>Error</td>
       <td>93</td>
       <td>124</td>
@@ -206,7 +206,7 @@ To install glmark2:
     </tr>
     <tr>
       <td>5</td>
-      <td></td>
+      <td>69</td>
       <td>Error</td>
       <td>93</td>
       <td>123</td>
