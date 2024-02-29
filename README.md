@@ -102,7 +102,7 @@ proot-distro login debian --user droidmaster
 sudo apt install lxde
 ```
 
-* [[Video] How to install Cinnamon - Pending]()
+* [[Video] How to install Cinnamon](https://youtu.be/_wZO5RZu2R8?feature=shared)
 ```
 # Commands: 
 proot-distro login debian --user droidmaster
