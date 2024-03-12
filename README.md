@@ -16,8 +16,14 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * ⬇️ [Download scripts to run the desktops](#easy-download-termux)
 * 🎨 [Customizations - Themes](#customizations-termux)
 
-  
+
+<br>
+<br>  
+
 ---  
+---  
+
+<br>
 <br>
 
 # PROOT-DISTRO (🍥 DEBIAN)
