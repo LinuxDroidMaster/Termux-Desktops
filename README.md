@@ -2,17 +2,27 @@
 Collection of scripts to launch Desktops with audio in Termux X11. You have also all the information needed to install your prefered Linux Distro and connect to it in the following steps. 
 
 # 📚 Index
-* 1️⃣ [First steps](#first-steps)
+
+### PROOT-DISTRO (🍥 DEBIAN)
+* 🏁 [First steps](#first-steps)
 * ⚙️ [Installing Desktops](#installing-desktops)
 * 💻 [Running the Desktops to use them with Termux X11](#running-desktops)
-* ⬇️ [Download scripts easily](#easy-download)
+* ⬇️ [Download scripts to run the desktops](#easy-download)
 * 🎨 [Customizations - Themes](#customizations)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
+### TERMUX (NO PROOT)
+* 🏁 [First steps](#first-steps-termux)
+* ⬇️ [Download scripts to run the desktops](#easy-download-termux)
+* 🎨 [Customizations - Themes](#customizations-termux)
+
+  
 ---  
 <br>
 
-# 1️⃣ First steps <a name=first-steps></a>
+# PROOT-DISTRO (🍥 DEBIAN)
+
+## 🏁 First steps <a name=first-steps></a>
 We are going to use Termux and Termux X11 in order to have a full Linux Desktop in our Android devices. 
 
 * [[Video] How to install Termux](https://www.youtube.com/watch?v=OMJAyq5NHp0)
@@ -136,7 +146,7 @@ sudo apt install kde-plasma-desktop
 ---  
 <br>
 
-# 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
+## 💻 Running the Desktops for use with Termux X11 <a name=running-desktops></a>
 All the scripts in this repository are prepared to run the different Desktops with audio in an easy way. 
 
 First you need to install the following packages in Termux: 
@@ -157,7 +167,7 @@ chmod +x startxfce4_debian.sh
 ---  
 <br>
 
-# ⬇️ Download scripts easily: <a name=easy-download></a> 
+## ⬇️ Download scripts easily: <a name=easy-download></a> 
 
 > [!NOTE]  
 > By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts.
@@ -187,9 +197,59 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/sta
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startkde_debian.sh
 ```
 
-# 🎨 Customizations <a name=customizations></a>
+## 🎨 Customizations <a name=customizations></a>
 * How to install nerd fonts (this allows you to have icons in the terminal):
 ```
 bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
 * [How to customize XFCE4 - Neon Theme](https://www.youtube.com/watch?v=rDHyPw_7ETs)
+
+
+---  
+<br>
+
+# TERMUX (NO PROOT)
+
+## 🏁 First steps <a name=first-steps-termux></a>
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+pkg install pulseaudio
+```
+
+Then you have to install the desktop you prefer, right now I have only test XFCE4 so here are the steps: 
+```
+pkg install xfce4
+```
+
+If you want to install chromium browser: 
+First you need to install the following packages in Termux: 
+```
+pkg install tur-repo
+pkg install chromium
+```
+
+Remember to run it with the `--no-sandbox flag`
+```
+chromium --no-sandbox
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts easily: <a name=easy-download-termux></a> 
+* startxfce4_termux.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_termux.sh
+```
+
+## 🎨 Customizations <a name=customizations-termux></a>
+* How to install nerd fonts (this allows you to have icons in the terminal):
+  1. Go to this page and download any font: [NERD FONTS](https://www.nerdfonts.com/font-downloads)
+  2. Paste the .ttf files under the following path:
+ ```
+# Tip:  /usr is at the same level as /home
+/usr/share/fonts
+ ```
