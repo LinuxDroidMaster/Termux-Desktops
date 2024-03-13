@@ -217,6 +217,10 @@ bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/ne
 # TERMUX (NO PROOT)
 
 ## 🏁 First steps <a name=first-steps-termux></a>
+
+> [!NOTE]  
+> All the process is described in this [video](https://www.youtube.com/watch?v=rq85dxMb7e4)
+
 First you need to install the following packages in Termux: 
 ```
 pkg update
@@ -250,6 +254,9 @@ chromium --no-sandbox
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_termux.sh
 ```
+
+---  
+<br>
 
 ## 🎨 Customizations <a name=customizations-termux></a>
 * How to install nerd fonts (this allows you to have icons in the terminal):
