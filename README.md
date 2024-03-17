@@ -206,6 +206,8 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startkde_debian.sh
 ```
+---  
+<br>
 
 ## 🎨 Customizations <a name=customizations></a>
 * How to install nerd fonts (this allows you to have icons in the terminal):
