@@ -11,6 +11,10 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🎨 [Customizations - Themes](#customizations)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
+### PROOT-DISTRO (🔼 ARCH)
+* 🏁 [First steps](#first-steps-arch)
+* ⬇️ [Download scripts to run the desktops](#easy-download-arch)
+
 ### TERMUX (NO PROOT)
 * 🏁 [First steps](#first-steps-termux)
 * ⬇️ [Download scripts to run the desktops](#easy-download-termux)
@@ -180,27 +184,27 @@ chmod +x startxfce4_debian.sh
 
 * startgnome_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startgnome_debian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startgnome_debian.sh
 ```
 
 * startxfce4_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_debian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startxfce4_debian.sh
 ```
 
 * startlxde_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startlxde_debian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startlxde_debian.sh
 ```
 
 * startcinnamon_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startcinnamon_debian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startcinnamon_debian.sh
 ```
 
 * startkde_debian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startkde_debian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_debian/startkde_debian.sh
 ```
 
 ## 🎨 Customizations <a name=customizations></a>
@@ -209,6 +213,52 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/sta
 bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
 * [How to customize XFCE4 - Neon Theme](https://www.youtube.com/watch?v=rDHyPw_7ETs)
+
+
+---  
+<br>
+
+# PROOT-DISTRO (🔼 ARCH)
+
+## 🏁 First steps <a name=first-steps-arch></a>
+All the process is described in more detail in this [video]().
+
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+pkg install pulseaudio
+pkg install proot-distro
+```
+
+Then install Arch and login once it finishes: 
+```
+proot-distro install archlinux
+proot-distro login archlinux
+```
+
+Update repositories and install any package you want: 
+```
+pacman -Sy
+pacman -Syu
+
+pacman -S sudo
+pacman -S xfce4
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts easily: <a name=easy-download-arch></a> 
+
+> [!NOTE]  
+> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts. And remember to give execution permissions to the script with `chmod +x scriptName.sh`
+
+* startxfce4_arch.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
+```
 
 
 ---  
@@ -252,7 +302,7 @@ chromium --no-sandbox
 ## ⬇️ Download scripts easily: <a name=easy-download-termux></a> 
 * startxfce4_termux.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/startxfce4_termux.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/startxfce4_termux.sh
 ```
 
 ---  
