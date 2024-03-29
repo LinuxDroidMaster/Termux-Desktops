@@ -294,9 +294,10 @@ pkg install tur-repo
 pkg install chromium
 ```
 
-Remember to run it with the `--no-sandbox flag`
+If you want to install VS Code: 
 ```
-chromium --no-sandbox
+pkg install tur-repo
+pkg install code-oss
 ```
 
 ---  
