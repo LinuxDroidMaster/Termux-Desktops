@@ -307,18 +307,26 @@ pkg install code-oss
 > [!IMPORTANT]  
 > All this process is explaining in the folowing [video - Pending -](). I highly recommend looking at it first 
 
+
+First of all you need to install Mobox (follow instructions from the official repository): https://github.com/olegos2/mobox
+
 1. Configure your Termux native desktop. I recommend following the process described in this [video](https://www.youtube.com/watch?v=rq85dxMb7e4).
 
 2. Download the following script into the `Download` folder. Thanks to the user `@Feer_C9` on [reddit](https://www.reddit.com/r/termux/comments/1bkzpzz/comment/kwwwxni/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) for this script
+
 * mobox_run.sh: 
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/mobox_run.sh
 ```
+
 3. Give script execution permissions:
 ```
 chmod +x mobox_run.sh
 ```
+
 4. Now you can run Wine explorer (from Mobox with all the configurations applied) with the following command: `./run_mobox.sh explorer` but I recommend creating a desktop shortcut. You can download the shortcut direclty into the `Desktop` folder with this command: 
+
+* MoboxExplorer.desktop: 
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/MoboxExplorer.desktop
 ```
