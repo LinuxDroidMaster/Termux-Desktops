@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Name=WineExplorerMobox
+
+Exec=../Downloads/mobox_run.sh explorer
+Type=Application
+Icon=wine
