@@ -370,7 +370,8 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 > All the process is described in this [video - Pending]()
 
 1. First you need to have your device <u>rooted</u>.
-2. Then you need to install the following packages in Termux: 
+2. You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.
+3. Then you need to install the following packages in Termux: 
 
 ```
 pkg update
