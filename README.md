@@ -421,7 +421,7 @@ mkdir dev/shm
 5. Create a start script: 
 ```
 cd ../
-nano start.sh
+vi start.sh
 ```
 Copy and paste the following: 
 ```
@@ -468,7 +468,7 @@ usermod -G 3003 -a root
 apt update
 apt upgrade
 
-apt install nano net-tools sudo git
+apt install nano vim net-tools sudo git
 ```
 
 8. Setup timezone: 
