@@ -23,7 +23,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 
 ### TERMUX CHROOT - Root needed - ⚠️ Work In Progress ⚠️
 * 🏁 [First steps](#first-steps-chroot)
-* 💻 [Setting Ubuntu chroot](#ubuntu-chroot)
+* 💻 [Setting Ubuntu and Debian chroot](#ubuntu-chroot)
 * ⬇️ [Download distros for Chroot](#distros-chroot)
 
 <br>
@@ -388,11 +388,14 @@ pkg install pulseaudio
 ---  
 <br>
 
-## 💻 Setting Ubuntu Chroot <a name=ubuntu-chroot></a>
+## 💻 Setting Ubuntu and Debian chroot <a name=ubuntu-chroot></a>
 
 This steps are from Ivon's blog but I modified a little bit some lines. These are the post used: 
 * [Install Ubuntu in chroot on Android without Linux Deploy](https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/)
 * [How to use Termux X11 - The X server on Android phone](https://ivonblog.com/en-us/posts/termux-x11/)
+
+> [!NOTE]
+> Everything should be similar for Debian (except the Snapd part, you don't need to do that in Debian). I need to test it and do a video about Debian but if you are familiarized with Linux it shouldn't be too complex. 
 
 1. Enter Android shell with root privileges: 
 ```
@@ -510,6 +513,8 @@ sudo apt install xubuntu-desktop
 sudo apt install kubuntu-desktop
 ```
 
+> [!NOTE]
+> This step is for Ubuntu only
 13. Disable Snapd (it can't be used on Termux): 
 ```
 apt-get autopurge snapd
@@ -524,7 +529,7 @@ Pin-Priority: -10
 EOF
 ```
 
-14. Exit chroot and modified the `start.sh` script created on step `5`: 
+14. Exit chroot and modify  the `start.sh` script created on step `5`: 
 ```
 nano /data/local/tmp/start.sh
 ```
