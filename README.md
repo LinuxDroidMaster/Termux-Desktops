@@ -562,5 +562,5 @@ curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-2
 ```
 * Download Debian 12 rootfs: (need to upload the file)
 ```
-curl https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/Rootfs_distros/debian12-arm64.tar.gz --output debian.tar.gz
+curl https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debian/debian12-arm64.tar.gz --output debian.tar.gz
 ```
