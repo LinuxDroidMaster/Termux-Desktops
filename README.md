@@ -24,6 +24,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 ### TERMUX CHROOT - Root needed - ⚠️ Work In Progress ⚠️
 * 🏁 [First steps](#first-steps-chroot)
 * 💻 [Setting Ubuntu chroot](#ubuntu-chroot)
+* ⬇️ [Download distros for Chroot](#distros-chroot)
 
 <br>
 <br>  
@@ -327,7 +328,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 chmod +x mobox_run.sh
 ```
 
-4. Now you can run Wine explorer (from Mobox with all the configurations applied) with the following command: `./run_mobox.sh explorer` but I recommend creating a desktop shortcut. You can download the shortcut direclty into the `Desktop` folder with this command: 
+4. Now you can run Wine explorer (from Mobox with all the configurations applied) with the following command: `./mobox_run.sh explorer` but I recommend creating a desktop shortcut. You can download the shortcut direclty into the `Desktop` folder with this command: 
 
 * MoboxExplorer.desktop: 
 ```
@@ -550,3 +551,16 @@ dbus-launch --exit-with-session startxfce4 &
 
 16. Open Termux X11 and check that you can use the desktop environment. 
 
+---  
+<br>
+
+## ⬇️ Download distros for Chroot <a name=distros-chroot></a>
+
+* Download Ubuntu 22.04 rootfs: 
+```
+curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
+```
+* Download Debian 12 rootfs: (need to upload the file)
+```
+curl https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/Rootfs_distros/debian12-arm64.tar.gz --output debian.tar.gz
+```
