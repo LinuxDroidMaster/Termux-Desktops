@@ -15,6 +15,11 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🏁 [First steps](#first-steps-arch)
 * ⬇️ [Download scripts to run the desktops](#easy-download-arch)
 
+### PROOT-DISTRO (🐉 KALI LINUX NETHUNTER)
+* 🏁 [First steps](#first-steps-kali-proot)
+* ⬇️ [Download scripts to run the desktops](#easy-download-kali-proot)
+
+
 ### TERMUX (NO PROOT)
 * 🏁 [First steps](#first-steps-termux)
 * 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
@@ -228,7 +233,7 @@ bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/ne
 # PROOT-DISTRO (🔼 ARCH)
 
 ## 🏁 First steps <a name=first-steps-arch></a>
-All the process is described in more detail in this [video]().
+All the process is described in more detail in this [video](https://www.youtube.com/watch?v=21yeQ1yMI0o).
 
 First you need to install the following packages in Termux: 
 ```
@@ -257,14 +262,74 @@ pacman -S xfce4
 ---  
 <br>
 
-## ⬇️ Download scripts easily: <a name=easy-download-arch></a> 
+# PROOT-DISTRO (🐉 KALI LINUX NETHUNTER)
+
+## 🏁 First steps <a name=first-steps-kali-proot></a>
+All the process is described in more detail in this [video - pending]().
+
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+pkg install pulseaudio
+pkg install proot-distro
+```
+
+Then install Kali Linux Nethunter with the steps described in the official web: 
+```
+termux-setup-storage
+pkg install wget
+wget -O install-nethunter-termux https://offs.ec/2MceZWr
+chmod +x install-nethunter-termux
+./install-nethunter-termux
+```
+
+Log into Kali, update repositories and install any package you want, for exmample Chromium browser: 
+```
+sudo apt update -y && sudo apt upgrade -y
+sudo apt install chromium -y
+
+# To run Chromium execute the following command once you are inside the Desktop environment: chromium --no-sandbox
+```
+
+Also to run the startxfce4_nethunter.sh script you need to add the following line in this file: 
+```
+nano $PREFIX/bin/nh
+```
+```
+-b /data/data/com.termux/files/usr/tmp:/tmp \
+```
+In this part: 
+```
+cmdline="proot \
+        --link2symlink \
+        -0 \
+        -r kali-arm64 \
+        -b /dev \
+        -b /proc \
+        -b /data/data/com.termux/files/usr/tmp:/tmp \ # --> ADD THE LINE HERE
+        -b kali-arm64$home:/dev/shm \
+        -w $home \
+           /usr/bin/env -i \
+           HOME=$home \
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \
+           TERM=$TERM \
+           LANG=C.UTF-8 \
+           $start"
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts easily: <a name=easy-download-kali-proot></a> 
 
 > [!NOTE]  
-> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts. And remember to give execution permissions to the script with `chmod +x scriptName.sh`
+> The default password for the user `kali` is `kali`. Remember to give execution permissions to the script with `chmod +x startxfce4_nethunter.sh`
 
-* startxfce4_arch.sh
+* startxfce4_nethunter.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_kali/startxfce4_nethunter.sh
 ```
 
 
@@ -368,7 +433,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
 > [!NOTE]  
-> All the process is described in this [video - Pending]()
+> All the process is described in this [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
 
 1. First you need to have your device <u>rooted</u>.
 2. You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.
