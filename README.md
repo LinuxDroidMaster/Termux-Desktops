@@ -348,7 +348,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 # PROOT-DISTRO (🐉 KALI LINUX NETHUNTER)
 
 ## 🏁 First steps <a name=first-steps-kali-proot></a>
-All the process is described in more detail in this [video - pending]().
+All the process is described in more detail in this [video](https://www.youtube.com/watch?v=TbjhxnaCFjs).
 
 First you need to install the following packages in Termux: 
 ```
