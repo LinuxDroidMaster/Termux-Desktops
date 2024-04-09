@@ -11,6 +11,11 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🎨 [Customizations - Themes](#customizations)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
+### PROOT-DISTRO (🟠 UBUNTU)
+* 🏁 [First steps](#first-steps-ubuntu-proot)
+* ⚙️ [Installing Desktops](#installing-desktops-ubuntu)
+* ⬇️ [Download scripts to run the desktops](#easy-download-ubuntu-proot)
+
 ### PROOT-DISTRO (🔼 ARCH)
 * 🏁 [First steps](#first-steps-arch)
 * ⬇️ [Download scripts to run the desktops](#easy-download-arch)
@@ -18,7 +23,6 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 ### PROOT-DISTRO (🐉 KALI LINUX NETHUNTER)
 * 🏁 [First steps](#first-steps-kali-proot)
 * ⬇️ [Download scripts to run the desktops](#easy-download-kali-proot)
-
 
 ### TERMUX (NO PROOT)
 * 🏁 [First steps](#first-steps-termux)
@@ -230,6 +234,72 @@ bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/ne
 ---  
 <br>
 
+# PROOT-DISTRO (🟠 UBUNTU)
+
+## 🏁 First steps <a name=first-steps-ubuntu-proot></a>
+All the process is described in more detail in this [video - pending]().
+
+First you need to install the following packages in Termux: 
+```
+pkg update
+pkg install x11-repo
+pkg install termux-x11-nightly
+pkg install pulseaudio
+pkg install proot-distro
+```
+
+Then install Ubuntu and login once it finishes: 
+```
+proot-distro install ubuntu
+proot-distro login ubuntu
+```
+
+Update repositories and install any package you want: 
+```
+apt update 
+apt upgrade
+
+apt install sudo nano adduser -y
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts easily: <a name=easy-download-ubuntu-proot></a> 
+* startgnome_ubuntu.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_ubuntu/startgnome_ubuntu.sh
+```
+
+---  
+<br>
+
+# ⚙️ Installing Desktops <a name=installing-desktop-ubuntu-proot></a> 
+
+I have installed different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
+
+* GNOME: 
+```
+# Commands: 
+proot-distro login ubuntu --user droidmaster
+```
+```
+sudo apt install dbus-x11 ubuntu-desktop -y
+```
+Run this command after it finishes: 
+```
+for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file
+done
+```
+Now you can run Ubuntu with GNOME UI from the script I left in the `Download scripts easily` section: 
+```
+chmod +x startgnome_ubuntu.sh
+./startgnome_ubuntu.sh
+```
+
+---  
+<br>
+
 # PROOT-DISTRO (🔼 ARCH)
 
 ## 🏁 First steps <a name=first-steps-arch></a>
@@ -257,6 +327,19 @@ pacman -Syu
 
 pacman -S sudo
 pacman -S xfce4
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts easily: <a name=easy-download-arch></a> 
+
+> [!NOTE]  
+> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts. And remember to give execution permissions to the script with `chmod +x scriptName.sh`
+
+* startxfce4_arch.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
 ```
 
 ---  
