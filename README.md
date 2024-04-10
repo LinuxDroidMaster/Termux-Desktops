@@ -274,7 +274,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ---  
 <br>
 
-# ⚙️ Installing Desktops <a name=installing-desktop-ubuntu-proot></a> 
+# ⚙️ Installing Desktops <a name=installing-desktops-ubuntu-proot></a> 
 
 I have use the following [post](https://ivonblog.com/en-us/posts/termux-proot-distro-ubuntu/) from Ivon's blog as a reference for some steps. 
 
