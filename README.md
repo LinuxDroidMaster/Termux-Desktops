@@ -13,7 +13,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 
 ### PROOT-DISTRO (🟠 UBUNTU)
 * 🏁 [First steps](#first-steps-ubuntu-proot)
-* ⚙️ [Installing Desktops](#installing-desktops-ubuntu)
+* ⚙️ [Installing Desktops](#installing-desktops-ubuntu-proot)
 * ⬇️ [Download scripts to run the desktops](#easy-download-ubuntu-proot)
 
 ### PROOT-DISTRO (🔼 ARCH)
