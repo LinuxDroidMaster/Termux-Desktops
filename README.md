@@ -276,7 +276,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 
 # ⚙️ Installing Desktops <a name=installing-desktop-ubuntu-proot></a> 
 
-I have installed different desktops, if you want me to test any other just leave a comment in any video and I will check it: 
+I have use the following [post](https://ivonblog.com/en-us/posts/termux-proot-distro-ubuntu/) from Ivon's blog as a reference for some steps. 
 
 * GNOME: 
 ```
@@ -291,6 +291,25 @@ Run this command after it finishes:
 for file in $(find /usr -type f -iname "*login1*"); do rm -rf $file
 done
 ```
+Disable snapd as it doesn't work on Termux
+```
+cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
+# To prevent repository packages from triggering the installation of Snap,
+# this file forbids snapd from being installed by APT.
+# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
+```
+
+Install firefox: 
+```
+sudo add-apt-repository ppa:mozillateam/ppa
+sudo apt-get update
+sudo apt-get install firefox-esr
+```
+
 Now you can run Ubuntu with GNOME UI from the script I left in the `Download scripts easily` section: 
 ```
 chmod +x startgnome_ubuntu.sh
