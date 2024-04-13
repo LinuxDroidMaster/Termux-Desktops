@@ -33,7 +33,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 ### TERMUX CHROOT - Root needed - ⚠️ Work In Progress ⚠️
 * 🏁 [First steps](#first-steps-chroot)
 * 💻 [Setting Ubuntu and Debian chroot](#ubuntu-chroot)
-* ⬇️ [Download distros for Chroot](#distros-chroot)
+* ⬇️ [Download distros for Chroot: Debian, Kali Nethunter, Ubuntu](#distros-chroot)
 
 <br>
 <br>  
@@ -476,7 +476,7 @@ pkg install code-oss
 
 ## 💻 Running Windows programs on Termux native (XFCE Desktop + Mobox): <a name=mobox-with-desktop></a> 
 > [!IMPORTANT]  
-> All this process is explaining in the folowing [video - Pending -](). I highly recommend looking at it first 
+> All this process is explaining in the folowing [video](https://www.youtube.com/watch?v=SfCKHWUwAr0). I highly recommend looking at it first 
 
 
 First of all you need to install Mobox (follow instructions from the official repository): https://github.com/olegos2/mobox
@@ -732,7 +732,12 @@ dbus-launch --exit-with-session startxfce4 &
 ```
 curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
 ```
-* Download Debian 12 rootfs: (need to upload the file)
+* Download Debian 12 rootfs:
 ```
 curl https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debian/debian12-arm64.tar.gz --output debian.tar.gz
+```
+
+* Download kali nethunter from their page or download direcly the full package with this command: 
+```
+wget https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-full.tar.xz
 ```
