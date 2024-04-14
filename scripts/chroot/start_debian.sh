@@ -12,9 +12,11 @@ busybox mount --bind /proc $DEBIANPATH/proc
 busybox mount -t devpts devpts $DEBIANPATH/dev/pts
 
 # /dev/shm for Electron apps
+mkdir $DEBIANPATH/dev/shm
 busybox mount -t tmpfs -o size=256M tmpfs $DEBIANPATH/dev/shm
 
 # Mount sdcard
+mkdir $DEBIANPATH/sdcard
 busybox mount --bind /sdcard $DEBIANPATH/sdcard
 
 # chroot into DEBIAN

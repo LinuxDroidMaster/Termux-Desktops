@@ -735,7 +735,7 @@ curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-2
 ```
 * Download Debian 12 rootfs:
 ```
-curl https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debian/debian12-arm64.tar.gz --output debian.tar.gz
+wget https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debian/debian12-arm64.tar.gz
 ```
 
 * Download kali nethunter from their page or download direcly the full package with this command: 
