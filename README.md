@@ -34,6 +34,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🏁 [First steps](#first-steps-chroot)
 * 💻 [Setting Ubuntu and Debian chroot](#ubuntu-chroot)
 * ⬇️ [Download distros for Chroot: Debian, Kali Nethunter, Ubuntu](#distros-chroot)
+* ⬇️ [Download scripts to run desktops](#easy-download-chroot)
 
 <br>
 <br>  
@@ -583,7 +584,7 @@ curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-2
 
 4. Unzip the downloaded file and create some folders to mount the sdcard
 ```
-tar xpvf ubuntu.tar.gz
+tar xpvf ubuntu.tar.gz --numeric-owner
 
 mkdir sdcard
 mkdir dev/shm
@@ -740,4 +741,14 @@ curl https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debia
 * Download kali nethunter from their page or download direcly the full package with this command: 
 ```
 wget https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-full.tar.xz
+```
+
+---  
+<br>
+
+## ⬇️ Download scripts to run desktops <a name=easy-download-chroot></a>
+
+* startxfce4_chrootDebian.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/startxfce4_chrootDebian.sh
 ```
