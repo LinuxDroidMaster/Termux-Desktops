@@ -32,7 +32,8 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 
 ### TERMUX CHROOT - Root needed - ⚠️ Work In Progress ⚠️
 * 🏁 [First steps](#first-steps-chroot)
-* 💻 [Setting Ubuntu and Debian chroot](#ubuntu-chroot)
+* 💻🍥 [Setting Debian chroot - automatic installer](#debian-chroot)
+* 💻🟠 [Setting Ubuntu chroot](#ubuntu-chroot)
 * ⬇️ [Download distros for Chroot: Debian, Kali Nethunter, Ubuntu](#distros-chroot)
 * ⬇️ [Download scripts to run desktops](#easy-download-chroot)
 
@@ -556,7 +557,32 @@ pkg install pulseaudio
 ---  
 <br>
 
-## 💻 Setting Ubuntu and Debian chroot <a name=ubuntu-chroot></a>
+## 💻🍥 Setting Debian chroot - automatic installer <a name=debian-chroot></a>
+> [!NOTE]
+> How to use the script and install Debian Chroot is explained in this [video - pending]()
+
+Please read first [#First Steps section](#first-steps-chroot)
+
+* Download the installer with this command: 
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/chroot_debian_installer.sh
+```
+
+* Run it with sudo privileges from Termux: 
+```
+su
+chmod +x chroot_debian_installer.sh
+sh chroot_debian_installer.sh
+```
+
+---  
+<br>
+
+## 💻🟠 Setting Ubuntu chroot <a name=ubuntu-chroot></a>
+
+<details>
+<summary><strong> [Commands] How to install and Setup Ubuntu chroot</strong></summary>
+
 
 This steps are from Ivon's blog but I modified a little bit some lines. These are the post used: 
 * [Install Ubuntu in chroot on Android without Linux Deploy](https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/)
@@ -723,6 +749,7 @@ dbus-launch --exit-with-session startxfce4 &
 ```
 
 16. Open Termux X11 and check that you can use the desktop environment. 
+</details>
 
 ---  
 <br>
@@ -750,5 +777,5 @@ wget https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-full.tar
 
 * startxfce4_chrootDebian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/startxfce4_chrootDebian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/deian/startxfce4_chrootDebian.sh
 ```
