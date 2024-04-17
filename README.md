@@ -777,5 +777,5 @@ wget https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-full.tar
 
 * startxfce4_chrootDebian.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/deian/startxfce4_chrootDebian.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/startxfce4_chrootDebian.sh
 ```
