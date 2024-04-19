@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Function to show farewell message
 goodbye() {
@@ -23,7 +23,7 @@ download_file() {
         echo -e "\e[1;33m[!] File already exists: $2\e[0m"
         echo -e "\e[1;33m[!] Skipping download...\e[0m"
     else
-        wget -q -P "$1" "$3"
+        wget -O "$1/$2" "$3"
         if [ $? -eq 0 ]; then
             success "File downloaded successfully: $2"
         else
@@ -37,12 +37,12 @@ download_file() {
 extract_file() {
     progress "Extracting file..."
     if [ -d "$1/debian12-arm64" ]; then
-        echo -e "\e[1;33m[!] Directory already exists: debian12-arm64\e[0m"
+        echo -e "\e[1;33m[!] Directory already exists: $1/debian12-arm64\e[0m"
         echo -e "\e[1;33m[!] Skipping extraction...\e[0m"
     else
         tar xpvf "$1/debian12-arm64.tar.gz" -C "$1" --numeric-owner >/dev/null 2>&1
         if [ $? -eq 0 ]; then
-            success "File extracted successfully"
+            success "File extracted successfully: $1/debian12-arm64"
         else
             echo -e "\e[1;31m[!] Error extracting file. Exiting...\e[0m"
             goodbye
@@ -53,15 +53,15 @@ extract_file() {
 # Function to download and execute script
 download_and_execute_script() {
     progress "Downloading script..."
-    if [ -e "$1/start_debian.sh" ]; then
-        echo -e "\e[1;33m[!] Script already exists: start_debian.sh\e[0m"
+    if [ -e "/data/local/tmp/start_debian.sh" ]; then
+        echo -e "\e[1;33m[!] Script already exists: /data/local/tmp/start_debian.sh\e[0m"
         echo -e "\e[1;33m[!] Skipping download...\e[0m"
     else
-        wget -q -P "$(dirname "$1")" "https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/start_debian.sh"
+        wget -O "/data/local/tmp/start_debian.sh" "https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/start_debian.sh"
         if [ $? -eq 0 ]; then
-            success "Script downloaded successfully"
+            success "Script downloaded successfully: /data/local/tmp/start_debian.sh"
             progress "Setting script permissions..."
-            chmod +x "$1/start_debian.sh"
+            chmod +x "/data/local/tmp/start_debian.sh"
             success "Script permissions set"
         else
             echo -e "\e[1;31m[!] Error downloading script. Exiting...\e[0m"
@@ -79,9 +79,9 @@ configure_debian_chroot() {
     if [ ! -d "$DEBIANPATH" ]; then
         mkdir -p "$DEBIANPATH"
         if [ $? -eq 0 ]; then
-            success "Created directory: chrootDebian"
+            success "Created directory: $DEBIANPATH"
         else
-            echo -e "\e[1;31m[!] Error creating directory: chrootDebian. Exiting...\e[0m"
+            echo -e "\e[1;31m[!] Error creating directory: $DEBIANPATH. Exiting...\e[0m"
             goodbye
         fi
     fi
@@ -136,9 +136,9 @@ configure_debian_chroot() {
     # Prompt for desktop environment
     progress "Select a desktop environment to install:"
     echo "1. XFCE4"
-    echo "2. KDE"
-    echo "3. Cinnamon"
-    echo "4. Gnome"
+    echo "2. KDE - not ready"
+    echo "3. Cinnamon - not ready"
+    echo "4. Gnome - not ready"
     echo -n "Enter your choice (1-4): "
     read DE_OPTION
 
@@ -167,7 +167,7 @@ configure_debian_chroot() {
 install_xfce4() {
     progress "Installing XFCE4..."
     busybox chroot $DEBIANPATH /bin/su - root -c 'apt update -y && apt install dbus-x11 xfce4 xfce4-terminal -y'
-    echo "Desktop environment: XFCE4" >> "$DEBIANPATH/start_debian.sh"
+    echo "Desktop environment: XFCE4" >> "/data/local/tmp/start_debian.sh"
     download_startxfce4_script
 }
 
@@ -175,7 +175,7 @@ install_xfce4() {
 install_kde() {
     progress "Installing KDE..."
     busybox chroot $DEBIANPATH /bin/su - root -c 'apt update -y && apt install dbus-x11 kde-plasma-desktop -y'
-    echo "Desktop environment: KDE" >> "$DEBIANPATH/start_debian.sh"
+    echo "Desktop environment: KDE" >> "/data/local/tmp/start_debian.sh"
 }
 
 # Function to install Cinnamon desktop environment
@@ -194,7 +194,7 @@ install_lxde() {
 download_startxfce4_script() {
     progress "Downloading startxfce4_chrootDebian.sh script..."
     if [ "$DE_OPTION" -eq 1 ]; then
-        wget -q -P "$(dirname "$0")" "https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/startxfce4_chrootDebian.sh"
+        wget -O "/data/local/tmp/startxfce4_chrootDebian.sh" "https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/startxfce4_chrootDebian.sh"
         if [ $? -eq 0 ]; then
             success "startxfce4_chrootDebian.sh script downloaded successfully"
         else
@@ -213,7 +213,7 @@ main() {
         download_dir="/data/local/tmp/chrootDebian"
         if [ ! -d "$download_dir" ]; then
             mkdir -p "$download_dir"
-            success "Created directory: chrootDebian"
+            success "Created directory: $download_dir"
         fi
         download_file "$download_dir" "debian12-arm64.tar.gz" "https://github.com/LinuxDroidMaster/Termux-Desktops/releases/download/Debian/debian12-arm64.tar.gz"
         extract_file "$download_dir"
