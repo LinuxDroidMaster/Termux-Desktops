@@ -30,7 +30,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * ⬇️ [Download scripts](#easy-download-termux)
 * 🎨 [Customizations - Themes](#customizations-termux)
 
-### TERMUX CHROOT - Root needed - ⚠️ Work In Progress ⚠️
+### TERMUX CHROOT - Root needed -
 * 🏁 [First steps](#first-steps-chroot)
 * 💻🍥 [Setting Debian chroot - automatic installer](#debian-chroot)
 * 💻🟠 [Setting Ubuntu chroot](#ubuntu-chroot)
@@ -239,7 +239,7 @@ bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/ne
 # PROOT-DISTRO (🟠 UBUNTU)
 
 ## 🏁 First steps <a name=first-steps-ubuntu-proot></a>
-All the process is described in more detail in this [video - pending]().
+All the process is described in more detail in this [video](https://www.youtube.com/watch?v=_vxhzSG2zVQ).
 
 First you need to install the following packages in Termux: 
 ```
@@ -532,12 +532,10 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 # TERMUX CHROOT - Root needed
 
 > [!CAUTION]
-> Work In Progress
+> READ CAREFULLY! When using Chroot environments to exit completely close the Termux application even from the background apps or if necessary force close it. Otherwise, in case you do some command like "rm -rf chrootFolder" the device will go crazy and you will have to force reboot it.
 
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
-> [!NOTE]  
-> All the process is described in this [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
 
 1. First you need to have your device <u>rooted</u>.
 2. You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.
@@ -579,6 +577,9 @@ sh chroot_debian_installer.sh
 <br>
 
 ## 💻🟠 Setting Ubuntu chroot <a name=ubuntu-chroot></a>
+
+> [!NOTE]  
+> All the process is described in this [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
 
 <details>
 <summary><strong> [Commands] How to install and Setup Ubuntu chroot</strong></summary>
