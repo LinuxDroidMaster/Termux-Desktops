@@ -36,6 +36,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 💻🟠 [Setting Ubuntu chroot](#ubuntu-chroot)
 * ⬇️ [Download distros for Chroot: Debian, Kali Nethunter, Ubuntu](#distros-chroot)
 * ⬇️ [Download scripts to run desktops](#easy-download-chroot)
+* 🎨 [Customizations (Nerdfonts, XFCE4 terminal color palettes, etc)](#customizations-chroot)
 
 <br>
 <br>  
@@ -779,4 +780,24 @@ wget https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-full.tar
 * startxfce4_chrootDebian.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/debian/startxfce4_chrootDebian.sh
+```
+
+---  
+<br>
+
+## 🎨 Customizations (Nerdfonts, XFCE4 terminal color palettes, etc) <a name=customizations-chroot></a>
+* XFCE4 color palettes:
+  * [Dracula](https://draculatheme.com/xfce4-terminal)
+  * [Nordic](https://github.com/nordtheme/xfce-terminal)     
+
+* Installing NerdFonts on chroot env (Debian, Ubuntu) from this [post](https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c):
+```
+sudo apt install wget unzip -y
+```
+```
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+&& cd ~/.local/share/fonts \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip \
+&& fc-cache -fv
 ```
