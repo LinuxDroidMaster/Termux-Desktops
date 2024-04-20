@@ -167,7 +167,6 @@ configure_debian_chroot() {
 install_xfce4() {
     progress "Installing XFCE4..."
     busybox chroot $DEBIANPATH /bin/su - root -c 'apt update -y && apt install dbus-x11 xfce4 xfce4-terminal -y'
-    echo "Desktop environment: XFCE4" >> "/data/local/tmp/start_debian.sh"
     download_startxfce4_script
 }
 
@@ -175,7 +174,6 @@ install_xfce4() {
 install_kde() {
     progress "Installing KDE..."
     busybox chroot $DEBIANPATH /bin/su - root -c 'apt update -y && apt install dbus-x11 kde-plasma-desktop -y'
-    echo "Desktop environment: KDE" >> "/data/local/tmp/start_debian.sh"
 }
 
 # Function to install Cinnamon desktop environment
