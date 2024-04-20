@@ -21,4 +21,5 @@ busybox mount --bind /sdcard $DEBIANPATH/sdcard
 
 # chroot into DEBIAN
 #busybox chroot $DEBIANPATH /bin/su - root
-busybox chroot $DEBIANPATH /bin/su - root -c 'export XDG_RUNTIME_DIR=${TMPDIR} && export PULSE_SERVER=tcp:127.0.0.1:4713 && sudo service dbus start && su - droidmaster -c "env DISPLAY=:0 startxfce4"'
+#busybox chroot $DEBIANPATH /bin/su - root -c 'export XDG_RUNTIME_DIR=${TMPDIR} && export PULSE_SERVER=tcp:127.0.0.1:4713 && sudo service dbus start && su - droidmaster -c "env DISPLAY=:0 startxfce4"'
+busybox chroot $DEBIANPATH /bin/su - droidmaster -c 'export DISPLAY=:0 && export PULSE_SERVER=127.0.0.1 && dbus-launch --exit-with-session startxfce4'
