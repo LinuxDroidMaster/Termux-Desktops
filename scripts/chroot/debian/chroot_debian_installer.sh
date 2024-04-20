@@ -202,6 +202,11 @@ download_startxfce4_script() {
     fi
 }
 
+modify_startfile_with_username() {
+    success "Set start_debian.sh file with user name..."
+    sed -i "s/droidmaster/$USERNAME/g" "$DEBIANPATH/../start_debian.sh"
+}
+
 # Main function
 main() {
     if [ "$(whoami)" != "root" ]; then
@@ -217,6 +222,7 @@ main() {
         extract_file "$download_dir"
         download_and_execute_script "$download_dir"
         configure_debian_chroot
+        modify_startfile_with_username
     fi
 }
 
