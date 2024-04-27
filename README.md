@@ -24,7 +24,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🏁 [First steps](#first-steps-kali-proot)
 * ⬇️ [Download scripts to run the desktops](#easy-download-kali-proot)
 
-### TERMUX (NO PROOT)
+### TERMUX NATIVE
 * 🏁 [First steps](#first-steps-termux)
 * 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * ⬇️ [Download scripts](#easy-download-termux)
@@ -441,7 +441,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 ---  
 <br>
 
-# TERMUX (NO PROOT)
+# TERMUX NATIVE
 
 ## 🏁 First steps <a name=first-steps-termux></a>
 
@@ -558,7 +558,7 @@ pkg install pulseaudio
 
 ## 💻🍥 Setting Debian chroot - automatic installer <a name=debian-chroot></a>
 > [!NOTE]
-> How to use the script and install Debian Chroot is explained in this [video - pending]()
+> How to use the script and install Debian Chroot is explained in this [video](https://www.youtube.com/watch?v=EDjKBme0DRI)
 
 Please read first [#First Steps section](#first-steps-chroot)
 
