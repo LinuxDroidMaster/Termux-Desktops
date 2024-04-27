@@ -22,7 +22,7 @@ All environments are configured with XFCE4 Desktop but you can change it
 
 | Proot distro (Debian) | Native | Chroot (Debian) |
 |---------------------------------------------|---------------------------------------------|---------------------------------------------|
-| <img src="/Documentation/images/preview_proot.jpg" width="200"/> | <img src="/Documentation/images/preview_native.jpg" width="200"/>| <img src="/Documentation/images/preview_chroot.jpg" width="200"/>|
+| <img src="/Documentation/images/preview_proot.jpg"/> | <img src="/Documentation/images/preview_native.jpg"/>| <img src="/Documentation/images/preview_chroot.jpg"/>|
 
 
 
