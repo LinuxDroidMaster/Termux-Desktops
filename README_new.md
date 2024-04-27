@@ -6,7 +6,8 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 
 # 📚 Index
 * 🏁 [First steps](#first-steps)
-* 🐧 [Termux native VS Proot-distro VS Chroot](#choose-linux)
+* ⚔️ [Termux native VS Proot-distro VS Chroot](#choose-linux)
+* 🐧 [How to install proot distributions: Ubuntu, Debian, Arch & Kali Nethunter](#proot-distributions)
 
 <br>
 <br>  
@@ -47,7 +48,7 @@ pkg install wget
 pkg install git
 ```
 
-# 🐧 Termux native VS Proot-distro VS Chroot<a name=choose-linux></a>
+# ⚔️ Termux native VS Proot-distro VS Chroot <a name=choose-linux></a>
 
 When setting up Linux on your Android device, you have several options to choose from. Understanding the differences between them can help you decide which environment best suits your needs:
 
@@ -90,3 +91,12 @@ Consider your requirements and preferences when choosing the Linux environment f
 - **Needs Root?**: Indicates whether root access is required for setting up the environment.
 - **Many Linux Apps?**: Reflects the level of compatibility with various Linux applications.
 - **Customization Level**: Describes the extent to which the environment can be customized or configured.
+
+
+## 🐧 How to install proot distributions: Ubuntu, Debian, Arch & Kali Nethunter <a name=proot-distributions></a>
+
+Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
+
+| Ubuntu | Debian | Arch | Kali NetHunter |
+|--------|--------|------|----------------|
+| <a href="/Documentation/proot/ubuntu_proot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Logo" width="100"></a> | <a href="/Documentation/proot/debian_proot.md"><img src="https://www.shareicon.net/data/2015/09/16/101872_debian_512x512.png" alt="Debian Logo" width="100"></a> | <a href="/Documentation/proot/arch_proot.md"><img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-512.png" alt="Arch Logo" width="100"></a> | <a href="/Documentation/proot/kalinethunter_proot.md"><img src="https://static-00.iconduck.com/assets.00/distributor-logo-kali-linux-icon-2048x2005-dki611fk.png" alt="Kali Logo" width="100"></a> |
