@@ -34,6 +34,14 @@ chmod +x setup-parrot-cli
 ./install-parrot-desktop
 ```
 
+You can check and install all parrot tools with the following commands: 
+```
+sudo apt search parrot-tool # To show all the available packages
+```
+```
+sudo apt install parrot-tools-web #or any other package
+```
+
 ---  
 <br>
 
