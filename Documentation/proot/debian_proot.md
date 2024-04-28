@@ -6,7 +6,6 @@
 * 💻 [Running the Desktops to use them with Termux X11](#running-desktops)
 * ⬇️ [Download scripts to run the desktops](#easy-download)
 * 🎨 [Customizations - Themes](#customizations)
-* 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
 <br>
 
@@ -23,8 +22,6 @@ We are going to use Termux and Termux X11 in order to have a full Linux Desktop 
 * [[Video] How to install and use Termux X11](https://www.youtube.com/watch?v=mXkXzFqSeYE)
 
 * [[Video] How to install a COMPLETE Linux environtment on ANDROID - Customizing XFCE4 - Neon theme - No Root](https://www.youtube.com/watch?v=rDHyPw_7ETs)
-
-* [[Video] How to install a Linux distro on Android](https://www.youtube.com/watch?v=OMJAyq5NHp0)
 
 <details>
 <summary><strong> [Commands] How to install a Linux Distro on Termux with proot-distro (No Root)</strong></summary>

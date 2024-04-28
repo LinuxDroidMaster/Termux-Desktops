@@ -2,6 +2,7 @@
 
 ## TERMUX NATIVE (NO PROOT)
 * 🏁 [First steps](#first-steps-termux)
+* 💻 [How to install apps inside Termux native desktop](#apps-termux-native)
 * 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * ⬇️ [Download scripts](#easy-download-termux)
 * 🎨 [Customizations - Themes](#customizations-termux)
@@ -46,6 +47,12 @@ If you want to install VS Code:
 pkg install tur-repo
 pkg install code-oss
 ```
+
+---  
+<br>
+
+## 💻 How to install apps inside Termux native desktop <a name=apps-termux-native></a> 
+### You have all the information to install apps inside your native Termux Desktop in this [video](https://www.youtube.com/watch?v=JCDAGNiuy3o)
 
 ---  
 <br>
