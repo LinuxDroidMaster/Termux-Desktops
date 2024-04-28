@@ -29,9 +29,26 @@ chmod +x setup-parrot-cli
 ./setup-parrot-cli
 ```
 
+* Configure Parrot OS: 
 ```
-#Inside parrot OS
-./install-parrot-desktop
+proot-distro login parrot
+
+# Inside Parrot OS
+apt update
+apt upgrade -y
+
+rm /etc/apt/sources.list
+
+echo "deb http://mirrors.ustc.edu.cn/parrot parrot main contrib non-free" >> etc/apt/sources.list
+echo "deb-src http://mirrors.ustc.edu.cn/parrot parrot main contrib non-free">> /etc/apt/sources.list
+
+#Import the gpg key, this is only required in Parrot Security OS
+wget http://archive.parrotsec.org/parrot/misc/archive.gpg -O /etc/apt/trustedgpg.d/parrot-archive-key.asc
+
+#Setup DNS
+echo "127.0.0.1 localhost" > /etc/hosts
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 ```
 
 ---  
