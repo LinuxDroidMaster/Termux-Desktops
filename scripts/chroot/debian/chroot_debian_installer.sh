@@ -138,7 +138,7 @@ configure_debian_chroot() {
     echo "1. XFCE4"
     echo "2. KDE - not ready"
     echo "3. Cinnamon - not ready"
-    echo "4. Gnome - not ready"
+    echo "4. LXDE - not ready"
     echo -n "Enter your choice (1-4): "
     read DE_OPTION
 
