@@ -9,7 +9,7 @@
 
 ## 🏁 First steps <a name=first-steps-parrot-proot></a>
 
-First you need to install the following packages in Termux: 
+* First you need to install the following packages in Termux: 
 ```
 pkg update
 pkg install x11-repo
@@ -18,7 +18,7 @@ pkg install pulseaudio
 pkg install proot-distro
 ```
 
-Then we are going to follow the steps describede here: https://github.com/LinuxDroidMaster/parrotOS-GUI-proot
+* Then we are going to follow the steps describede here: https://github.com/LinuxDroidMaster/parrotOS-GUI-proot
 
 ```
 pkg update -y && pkg upgrade -y
@@ -32,6 +32,29 @@ chmod +x setup-parrot-cli
 ```
 #Inside parrot OS
 ./install-parrot-desktop
+```
+
+* Finally you need to configure everything to have a GUI Desktop (I recommend copy/pasting this commands 1 by 1): 
+
+Note: Change `droidmaster` with your username:
+```
+apt update
+
+apt install parrot-core -y
+
+apt update
+apt upgrade -y
+
+apt install sudo desktop-base xfce4 xfce4-terminal
+
+adduser -m droidamster
+echo "droidmaster ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
+apt update
+apt install parrot-desktop-mate -y
+
+apt install locales-all -y
+sudo dpkg-reconfigure locales
 ```
 
 You can check and install all parrot tools with the following commands: 
