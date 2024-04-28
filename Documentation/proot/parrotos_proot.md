@@ -45,4 +45,6 @@ chmod +x setup-parrot-cli
 * startxfce4_parrot.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_parrot/startxfce4_parrot.sh
+chmod +x startxfce4_parrot.sh
+./startxfce4_parrot.sh
 ```
