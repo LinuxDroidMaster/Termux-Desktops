@@ -39,6 +39,7 @@ chmod +x setup-parrot-cli
 Note: Change `droidmaster` with your username:
 ```
 apt update
+apt upgrade -y
 
 apt install parrot-core -y
 
