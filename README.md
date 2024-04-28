@@ -11,7 +11,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 # 📚 Index
 * 🏁 [First steps](#first-steps)
 * ⚔️ [Termux native VS Proot-distro VS Chroot](#choose-linux)
-* 🐧 [How to install proot distributions: Ubuntu, Debian, Arch & Kali Nethunter](#proot-distributions)
+* 🐧 [How to install proot distributions: Ubuntu, Debian, Arch, Kali Nethunter & Parrot OS](#proot-distributions)
 * 💻 [How to install Termux Native Desktop](#termux-native)
 * 💀 [How to install Chroot distributions: Ubuntu, Debian](#chroot-distributions)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
@@ -106,7 +106,7 @@ Consider your requirements and preferences when choosing the Linux environment f
 ---  
 <br>
 
-## 🐧 How to install proot distributions: Ubuntu, Debian, Arch & Kali Nethunter <a name=proot-distributions></a>
+## 🐧 How to install proot distributions: Ubuntu, Debian, Arch, Kali Nethunter & Parrot OS <a name=proot-distributions></a>
 
 Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
 
