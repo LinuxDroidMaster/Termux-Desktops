@@ -42,6 +42,11 @@ sudo apt search parrot-tool # To show all the available packages
 sudo apt install parrot-tools-web #or any other package
 ```
 
+If you want to have all the icons and customization for your Parrot Desktop you can install the following package and you will automatically have the right icons and themes available in XFCE4: 
+```
+apt install parrot-desktop-mate
+```
+
 ---  
 <br>
 
