@@ -6,6 +6,7 @@
 ## PROOT-DISTRO (🦜 PARROT OS)
 * 🏁 [First steps](#first-steps-parrot-proot)
 * ⬇️ [Download scripts to run the desktops](#easy-download-parrot-proot)
+* ⬇️ [Download Parrot OS backups](#download-parrot-backups)
 
 ## 🏁 First steps <a name=first-steps-parrot-proot></a>
 
@@ -29,6 +30,7 @@ chmod +x setup-parrot-cli
 ./setup-parrot-cli
 ```
 
+* Now you can restore the backup files as I show in the video or continue with the manual installation with the following commands: 
 ```
 #Inside parrot OS
 ./install-parrot-desktop
@@ -58,3 +60,17 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 chmod +x startxfce4_parrot.sh
 ./startxfce4_parrot.sh
 ```
+
+
+---  
+<br>
+
+## ⬇️ Download Parrot OS backups <a name=download-parrot-backups></a> 
+
+* [Download backup with everything updated and Hack The Box customization (~5GB) - pending link]()
+
+<img src="/Documentation/images/parrot_htb_backup.jpg"/>
+
+* [Download backup with minimal installation (~2.7GB) - pending link]()
+
+<img src="/Documentation/images/parrot_minimal_backup.jpg"/>
