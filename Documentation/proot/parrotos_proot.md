@@ -1,7 +1,7 @@
 # 📚 Index
 
 > [!NOTE]  
-> All the process is described in more detail in this [video - pending]().
+> All the process is described in more detail in this [video](https://www.youtube.com/watch?v=sB0O1UMuuoA).
 
 ## PROOT-DISTRO (🦜 PARROT OS)
 * 🏁 [First steps](#first-steps-parrot-proot)
