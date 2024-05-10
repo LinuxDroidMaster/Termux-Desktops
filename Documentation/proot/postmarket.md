@@ -72,7 +72,6 @@ LOGO="postmarketos-logo"' > /etc/os-release
 * startkde_postmarket.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_postmarket/startkde_postmarket.sh
-wget PENDING
 chmod +x startkde_postmarket.sh
 ./startkde_postmarket.sh
 ```
