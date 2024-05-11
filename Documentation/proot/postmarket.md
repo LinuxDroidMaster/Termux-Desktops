@@ -50,8 +50,9 @@ addgroup network
 
 ```
 adduser -g wheel,audio,video,power,storage,lp,sys,network user
-
-echo "user ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers
+```
+```
+echo "user ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 su user -c "sudo setup-xorg-base postmarketos-ui-plasma-mobile kde-applications-base maliit-keyboard"
 ```
 
