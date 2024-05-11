@@ -25,9 +25,14 @@ pkg install proot-distro
 
 ## 🤚 Manual install <a name=postmarket-manual></a>
 
-* Install Alpine on proot-distro
+* Install and login into Alpine on proot-distro
 ```
 pd in alpine
+pd login alpine
+```
+
+* Inside Alpine we are going to configure everything we need:
+```
 echo "https://mirror.postmarketos.org/postmarketos/v22.06" >> /etc/apk/repositories
 sed -i 's/edge/v3.16/g' /etc/apk/repositories
 
@@ -41,7 +46,7 @@ addgroup power
 addgroup network
 ```
 
-* Add and configure a new user. Change `user` with your username and set the password to NUMBERS ONLY (if not you won't be able to login): 
+* Add and configure a new user. Change `user` with your username and set the password to <b>NUMBERS ONLY</b> (if not you won't be able to login): 
 
 ```
 adduser -g wheel,audio,video,power,storage,lp,sys,network user
