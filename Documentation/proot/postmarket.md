@@ -8,6 +8,8 @@
 * 🤚 [Manual install](#postmarket-manual)
 * ⬇️ [Download scripts to run the desktops](#easy-download-postmarket-proot)
 
+Thanks to @Windows1105 for his post in Reddit: https://www.reddit.com/r/termux/comments/1c0l7b7/postmarketos_with_plasma_mobile/
+
 
 ## 🏁 First steps <a name=first-steps-postmarket-proot></a>
 
