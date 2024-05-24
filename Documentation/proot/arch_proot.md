@@ -2,6 +2,7 @@
 
 ## PROOT-DISTRO (🔼 ARCH)
 * 🏁 [First steps](#first-steps-arch)
+* 💻 [How to install KDE Plasma Desktop](#kde-arch)
 * ⬇️ [Download scripts to run the desktops](#easy-download-arch)
 
 <br>
@@ -42,12 +43,32 @@ pacman -S xfce4
 ---  
 <br>
 
+## 💻 How to install KDE Plasma Desktop <a name=kde-arch></a> 
+1. Follow first steps
+2. Install the following packages in Archlinux proot
+* Log into Arch
+```
+pd login archlinux
+```
+* Install the packages needed
+```
+
+```
+
+---  
+<br>
+
 ## ⬇️ Download scripts easily: <a name=easy-download-arch></a> 
 
 > [!NOTE]  
-> By default this script works with the user "droidmaster". If you create a user with a different name in proot-distro, please change where it says "droidmaster" inside the scripts. And remember to give execution permissions to the script with `chmod +x scriptName.sh`
+> By default this script works with the user `droidmaster`. If you create a user with a different name in proot-distro, please change where it says `droidmaster` inside the scripts. And remember to give execution permissions to the script with `chmod +x scriptName.sh`
 
 * startxfce4_arch.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startxfce4_arch.sh
+```
+
+* startkde_arch.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startkde_arch.sh
 ```
