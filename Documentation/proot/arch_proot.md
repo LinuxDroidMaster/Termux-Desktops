@@ -50,9 +50,22 @@ pacman -S xfce4
 ```
 pd login archlinux
 ```
-* Install the packages needed
+* Install the packages needed (if you want it lighter you can just install the first packages `pacman -S plasma-desktop sudo dbus`)
 ```
-
+pacman -S plasma-desktop sudo dbus kde-applications kde-graphics kde-utilities konsole thunar
+```
+* Add a new user and set a password
+```
+adduser -m -G wheel droidmaster
+passwd droidmaster
+```
+* Give sudo permissions to the user
+```
+nano /etc/sudoers
+```
+```
+# Paste the following line
+droidmaster ALL=(ALL) ALL
 ```
 
 ---  
