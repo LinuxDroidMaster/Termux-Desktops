@@ -56,7 +56,7 @@ pacman -S plasma-desktop sudo dbus kde-applications kde-graphics kde-utilities k
 ```
 * Add a new user and set a password
 ```
-adduser -m -G wheel droidmaster
+useradd -m -G wheel droidmaster
 passwd droidmaster
 ```
 * Give sudo permissions to the user
