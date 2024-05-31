@@ -1,7 +1,7 @@
 # 📚 Index
 
 > [!NOTE]  
-> All the process is described in more detail in this [video - pending]().
+> All the process is described in more detail in this [video](https://youtu.be/G5fJCuKMiVQ?si=pLezKNivGVYsc1Bw).
 
 ## PROOT-DISTRO (⏫ POSTMARKET)
 * 🏁 [First steps](#first-steps-postmarket-proot)
