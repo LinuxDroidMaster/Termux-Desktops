@@ -44,6 +44,10 @@ pacman -S xfce4
 <br>
 
 ## 💻 How to install KDE Plasma Desktop <a name=kde-arch></a> 
+> [!NOTE]  
+> All the process is described in more detail in this [video](https://youtu.be/0PX3I1zLqlY?si=wc43q_5miQWGOns3).
+
+
 1. Follow first steps
 2. Install the following packages in Archlinux proot
 * Log into Arch
