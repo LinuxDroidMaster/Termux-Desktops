@@ -189,8 +189,42 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 <br>
 
 ## 🎨 Customizations <a name=customizations></a>
+
+* Customization videos: 
+    * [How to customize XFCE4 - Neon Theme](https://www.youtube.com/watch?v=rDHyPw_7ETs)
+    * How to fully customize XFCE4 from scratch (new dock, menu, etc) - Pending
+
+
 * How to install nerd fonts (this allows you to have icons in the terminal):
 ```
 bash -c  "$(curl -fsSL https://raw.githubusercontent.com/officialrajdeepsingh/nerd-fonts-installer/main/install.sh)"
 ```
-* [How to customize XFCE4 - Neon Theme](https://www.youtube.com/watch?v=rDHyPw_7ETs)
+
+* Whisker menu and MugShot (to improve default desktop default menu) 
+
+```
+sudo apt install xfce4-whiskermenu-plugin
+sudo apt install mugshot
+```
+
+* Install icon themes: 
+```
+apt search icon-theme
+sudo apt install papirus-icon-theme moka-icon-theme
+```
+
+* Install GTK themes (system themes)
+```
+apt search gtk-themes
+sudo apt install numix-gtk-theme greybird-gtk-theme
+```
+
+* Install alternative dock (bottom panel)
+```
+sudo apt install plank
+plank --preferences
+```
+
+* Install Conky (desktop widgets)
+```
+sudo apt install conky-all
