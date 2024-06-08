@@ -43,9 +43,7 @@ apk add sudo nano dbus-x11 xfce4
 
 * Create a new user and give it sudo privileges: 
 ```
-apk useradd droidmaster
-passwd droidmaster
-
+adduser droidmaster
 nano /etc/sudoers
 
 # Add the following line to the sudoers file
