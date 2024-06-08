@@ -68,7 +68,7 @@ chmod +x startxfce4_parrot.sh
 ## ⬇️ Download Parrot OS backups <a name=download-parrot-backups></a> 
 
 * [Download backup with everything updated and Hack The Box customization (~5GB) - MEGA](https://mega.nz/file/1al3RQxa#1jbHkQQXx4h00eDAkzyTz3eHZgHYQ_qZzow570JCpk8)
-* [Download backup with everything updated and Hack The Box customization (~5GB) - MEDDIAFIRE](https://www.mediafire.com/file/biiqgwf43jaj4xr/ParrotBackup_HTBcustom/file)
+* [Download backup with everything updated and Hack The Box customization (~5GB) - MEDIAFIRE](https://www.mediafire.com/file/biiqgwf43jaj4xr/ParrotBackup_HTBcustom/file)
 
 <img src="/Documentation/images/parrot_htb_backup.jpg"/>
 
