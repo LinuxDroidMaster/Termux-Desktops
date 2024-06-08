@@ -11,7 +11,7 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 # 📚 Index
 * 🏁 [First steps](#first-steps)
 * ⚔️ [Termux native VS Proot-distro VS Chroot](#choose-linux)
-* 🐧 [How to install proot distributions: Ubuntu, Debian, Arch, Kali Nethunter, Parrot OS, PostMarket OS](#proot-distributions)
+* 🐧 [How to install proot distributions: Alpine, Ubuntu, Debian, Arch, Kali Nethunter, Parrot OS, PostMarket OS](#proot-distributions)
 * 💻 [How to install Termux Native Desktop](#termux-native)
 * 💀 [How to install Chroot distributions: Ubuntu, Debian](#chroot-distributions)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
@@ -110,9 +110,9 @@ Consider your requirements and preferences when choosing the Linux environment f
 
 Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
 
-| Ubuntu | Debian | Arch | Kali NetHunter | Parrot OS | PostMarket |
+| Alpine | Ubuntu | Debian | Arch | Kali NetHunter | Parrot OS | PostMarket |
 |--------|--------|------|----------------|----------------|----------------|
-| <a href="/Documentation/proot/ubuntu_proot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Logo" width="100"></a> | <a href="/Documentation/proot/debian_proot.md"><img src="https://www.shareicon.net/data/2015/09/16/101872_debian_512x512.png" alt="Debian Logo" width="100"></a> | <a href="/Documentation/proot/arch_proot.md"><img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-512.png" alt="Arch Logo" width="100"></a> | <a href="/Documentation/proot/kalinethunter_proot.md"><img src="https://static-00.iconduck.com/assets.00/distributor-logo-kali-linux-icon-2048x2005-dki611fk.png" alt="Kali Logo" width="100"></a> | <a href="/Documentation/proot/parrotos_proot.md"><img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/b91dba39-aef6-4808-be11-8eda81f81f56.png" alt="Kali Logo" width="100"></a> | <a href="/Documentation/proot/postmarket.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/PostmarketOS_logo.svg/1024px-PostmarketOS_logo.svg.png" alt="Kali Logo" width="100"></a> |
+| <a href="/Documentation/proot/alpine_proot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/New_Logo_Alpine_Linux.svg/1200px-New_Logo_Alpine_Linux.svg.png" alt="Alpine Logo" width="100"></a> | <a href="/Documentation/proot/ubuntu_proot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Logo" width="100"></a> | <a href="/Documentation/proot/debian_proot.md"><img src="https://www.shareicon.net/data/2015/09/16/101872_debian_512x512.png" alt="Debian Logo" width="100"></a> | <a href="/Documentation/proot/arch_proot.md"><img src="https://cdn0.iconfinder.com/data/icons/flat-round-system/512/archlinux-512.png" alt="Arch Logo" width="100"></a> | <a href="/Documentation/proot/kalinethunter_proot.md"><img src="https://static-00.iconduck.com/assets.00/distributor-logo-kali-linux-icon-2048x2005-dki611fk.png" alt="Kali Logo" width="100"></a> | <a href="/Documentation/proot/parrotos_proot.md"><img src="https://gdm-catalog-fmapi-prod.imgix.net/ProductLogo/b91dba39-aef6-4808-be11-8eda81f81f56.png" alt="Kali Logo" width="100"></a> | <a href="/Documentation/proot/postmarket.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/PostmarketOS_logo.svg/1024px-PostmarketOS_logo.svg.png" alt="Kali Logo" width="100"></a> |
 
 ---  
 <br>
