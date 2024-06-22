@@ -192,7 +192,7 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 
 * Customization videos: 
     * [How to customize XFCE4 - Neon Theme](https://www.youtube.com/watch?v=rDHyPw_7ETs)
-    * How to fully customize XFCE4 from scratch (new dock, menu, etc) - Pending
+    * [How to fully customize XFCE4 from scratch (new dock, menu, etc)](https://youtu.be/REv67sQp7aY?feature=shared)
 
 
 * How to install nerd fonts (this allows you to have icons in the terminal):
