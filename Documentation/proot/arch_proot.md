@@ -3,6 +3,7 @@
 ## PROOT-DISTRO (🔼 ARCH)
 * 🏁 [First steps](#first-steps-arch)
 * 💻 [How to install KDE Plasma Desktop](#kde-arch)
+* 💻 [How to install GNOME Desktop](#gnome-arch)
 * ⬇️ [Download scripts to run the desktops](#easy-download-arch)
 
 <br>
@@ -75,6 +76,68 @@ droidmaster ALL=(ALL) ALL
 ---  
 <br>
 
+## 💻 How to install GNOME Desktop <a name=gnome-arch></a> 
+> [!NOTE]  
+> All the process is described in more detail in this [video - pending]().
+
+**Thanks to the user [@Windows1105](https://www.reddit.com/user/Windows1105/) for [this post in reddit](https://www.reddit.com/r/termux/comments/1bo10lb/fedora_rawhide_with_gnome_46_updated_installation/)**
+
+
+1. Follow first steps
+2. Install the following packages in Archlinux proot
+* Log into Arch
+```
+pd login archlinux
+pacman -Syu
+
+pacman -Sy gnome dbus gnome-terminal gnome-tweaks --needed --noconfirm
+```
+
+3. Execute the following command to fix a GNOME error that won't allow us to start the desktop
+
+```
+find /usr -type f -iname "*login1*" -exec rm -f {} \; && mkdir /run/dbus
+```
+
+4. Add a new user and set a password
+```
+useradd -m -G wheel droidmaster
+passwd droidmaster
+```
+* Give sudo permissions to the user
+```
+nano /etc/sudoers
+```
+```
+# Paste the following line
+droidmaster ALL=(ALL) ALL
+```
+
+5. Customize GNOME: 
+
+* Open Extensions and enable "User Themes"
+
+* Look for a GTK theme on xfce4looks or install a theme from the terminal: 
+```
+pacman -Ss gtk-theme # To search for the themes available on the repository
+pacman -Sy pop-gtk-theme # To install a theme form the previous list
+```
+
+* We can do the same with the icon themes: 
+```
+pacman -Ss icon-theme # To search for the icons available on the repository
+pacman -Sy epapirus-icon-theme # To install an icon pack form the previous list
+```
+
+* Open Gnome Tweaks and select the theme and the icons installed on the `Appearance` menu
+
+
+
+
+
+---  
+<br>
+
 ## ⬇️ Download scripts easily: <a name=easy-download-arch></a> 
 
 > [!NOTE]  
@@ -88,4 +151,9 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 * startkde_arch.sh
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startkde_arch.sh
+```
+
+* startgnome_arch.sh
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_arch/startgnome_arch.sh
 ```
