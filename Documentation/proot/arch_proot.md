@@ -90,7 +90,7 @@ droidmaster ALL=(ALL) ALL
 pd login archlinux
 pacman -Syu
 
-pacman -Sy gnome dbus gnome-terminal gnome-tweaks --needed --noconfirm
+pacman -Sy sudo gnome dbus gnome-terminal gnome-tweaks --needed --noconfirm
 ```
 
 3. Execute the following command to fix a GNOME error that won't allow us to start the desktop
