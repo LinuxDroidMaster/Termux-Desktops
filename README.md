@@ -12,8 +12,8 @@ Collection of scripts to launch Desktops with audio in Termux X11. You have also
 * 🏁 [First steps](#first-steps)
 * ⚔️ [Termux native VS Proot-distro VS Chroot](#choose-linux)
 * 🐧 [How to install proot distributions: Alpine, Ubuntu, Debian, Arch, Kali Nethunter, Parrot OS, PostMarket OS](#proot-distributions)
+* 💀 [How to install Chroot distributions: Ubuntu, Debian, Box64Droid](#chroot-distributions)
 * 💻 [How to install Termux Native Desktop](#termux-native)
-* 💀 [How to install Chroot distributions: Ubuntu, Debian](#chroot-distributions)
 * 🔥 [Hardware acceleration in Termux](https://github.com/LinuxDroidMaster/Termux-Desktops/blob/main/Documentation/HardwareAcceleration.md)
 
 <br>
@@ -117,13 +117,13 @@ Click on the different icons to see how you can install the distribution of your
 ---  
 <br>
 
-## 💀 How to install Chroot distributions: Ubuntu, Debian <a name=chroot-distributions></a>
+## 💀 How to install Chroot distributions: Ubuntu, Debian, Box64Droid <a name=chroot-distributions></a>
 
 Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
 
-| Ubuntu | Debian |
-|--------|--------|
-| <a href="/Documentation/chroot/ubuntu_chroot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Logo" width="100"></a> | <a href="/Documentation/chroot/debian_chroot.md"><img src="https://www.shareicon.net/data/2015/09/16/101872_debian_512x512.png" alt="Debian Logo" width="100"></a> |
+| Ubuntu | Debian | Box64Droid (Ubuntu) |
+|--------|--------|--------|
+| <a href="/Documentation/chroot/ubuntu_chroot.md"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo-ubuntu_cof-orange-hex.svg/1200px-Logo-ubuntu_cof-orange-hex.svg.png" alt="Ubuntu Logo" width="100"></a> | <a href="/Documentation/chroot/debian_chroot.md"><img src="https://www.shareicon.net/data/2015/09/16/101872_debian_512x512.png" alt="Debian Logo" width="100"></a> | <a href="/Documentation/chroot/box64droid_chroot.md"><img src="https://box64droid.com/wp-content/uploads/2023/10/Box64droid-logo.png" alt="Debian Logo" width="100"></a> |
 
 ---  
 <br>
