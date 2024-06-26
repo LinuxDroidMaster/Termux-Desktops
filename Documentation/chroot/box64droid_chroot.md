@@ -97,3 +97,20 @@ Execute it
 chmod +x starGUI.sh
 ./startGUI.sh
 ```
+
+---
+
+<br>
+
+## 🍷 How to run wine <a name=box64droid-wine></a>
+
+- **To run Wine you can just execute the following command:** 
+
+```
+box64 wine
+```
+
+- **I recommend that you change the DPI to make the Wine menus larger. Open `Winecfg`, go to the `Graphics` tab and increase the DPI slide.**
+```
+box64 wine winecfg
+```
