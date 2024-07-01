@@ -99,7 +99,14 @@ wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scr
 <br>
 
 ## 🎨 Customizations <a name=customizations-termux></a>
-* How to install nerd fonts (this allows you to have icons in the terminal):
+
+* How to install nerd fonts (this allows you to have icons in the terminal) - automatic installation: We are going to use [this repository](https://github.com/arnavgr/termux-nf)
+```
+pkg install curl ncurses-utils zip
+curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh | bash
+```
+
+* How to install nerd fonts (this allows you to have icons in the terminal) - manual installation:
   1. Go to this page and download any font: [NERD FONTS](https://www.nerdfonts.com/font-downloads)
   2. Paste the .ttf files under the following path:
  ```
