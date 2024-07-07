@@ -1,0 +1,7 @@
+[Desktop Entry]
+
+Name=Shutdown
+
+Exec=kill -9 $(pgrep -f "termux.x11") 2>/dev/null
+Type=Application
+Icon=xfsm-shutdown
