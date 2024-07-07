@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-
+export olddir=$PWD
 show_help() {
 cat << EOF
 Usage: ${0##*/} [-hu] FILE [Args...]
@@ -74,7 +74,7 @@ fi
 
 
 # [start-tfm]
-cd
+cd # This line changes your directory to home. It is specifically problematic because some executables REQUIRE you to be within the executable's directory
 mkdir -p /sdcard/Android/data/com.termux/files/Download
 mkdir -p /sdcard/moboxtrace
 
@@ -158,6 +158,10 @@ load_configs
 
 ln -sf $(df -H | grep -o "/storage/....-....") "$WINEPREFIX/dosdevices/f:" &>/dev/null
 
+# cd back to the original directory(OG games require you to be in the same directory as the executable)
+cd "$olddir"
+#echo $PWD
+#echo $olddir
 # Run the target app
 taskset -c $PRIMARY_CORES $GLIBC_BIN/box64 $GLIBC_BIN/wine "$@"
 
