@@ -2,6 +2,8 @@
 
 Name=Shutdown
 
-Exec=kill -9 $(pgrep -f "termux.x11") 2>/dev/null
+Exec=sh -c "kill -9 $(pgrep -f 'termux.x11')"
 Type=Application
 Icon=xfsm-shutdown
+Terminal=true
+StartupNotify=false
