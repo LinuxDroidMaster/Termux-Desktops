@@ -129,3 +129,12 @@ shut it down. You can do so by running the following command (If you FORGET to s
 ```
 kill -9 $(pgrep -f "termux.x11") 2>/dev/null
 ```
+
+You can also download this .desktop file and place it inside your Desktop
+
+* Shutdown.desktop: 
+```
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/Shutdown.desktop
+```
+Double clicking on Shutdown.desktop will close the Termux X11 session immediately.
+
