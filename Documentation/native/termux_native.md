@@ -113,3 +113,19 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 # Tip:  /usr is at the same level as /home
 /usr/share/fonts
  ```
+
+## Troubleshooting
+
+### Termux X11 randomly getting killed/shutdown
+You need to disable Phantom Processes using this guide
+
+https://github.com/whyakari/TermuxDisableProcces
+
+If it Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app AND Termux X11**
+https://dontkillmyapp.com/
+
+WARNING: Doing the above(Disabling Phantom Process killer, following dontkillmyapp) would mean that the Termux X11 session WILL NEVER shutdown unless YOU manually
+shut it down. You can do so by running the following command (If you FORGET to shutdown Termux X11 then it might result in battery drain)
+```
+kill -9 $(pgrep -f "termux.x11") 2>/dev/null
+```
