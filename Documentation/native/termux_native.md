@@ -121,7 +121,7 @@ You need to disable Phantom Processes using this guide
 
 https://github.com/whyakari/TermuxDisableProcces
 
-If it Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app AND Termux X11**
+If Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app AND Termux X11**
 https://dontkillmyapp.com/
 
 WARNING: Doing the above(Disabling Phantom Process killer, following dontkillmyapp) would mean that the Termux X11 session WILL NEVER shutdown unless YOU manually
