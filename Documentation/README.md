@@ -1,4 +1,4 @@
-### Welcome to teh documentation! 👋
+### Welcome to the documentation! 👋
 
 📁 **Explore Different Folders:**
 
