@@ -59,7 +59,7 @@ pkg install code-oss
 
 ## 💻 Running Windows programs on Termux native (XFCE Desktop + Mobox): <a name=mobox-with-desktop></a> 
 > [!IMPORTANT]  
-> All this process is explaining in the folowing [video](https://www.youtube.com/watch?v=SfCKHWUwAr0). I highly recommend looking at it first 
+> This whole process is explained in the following [video](https://www.youtube.com/watch?v=SfCKHWUwAr0). I highly recommend looking at it first 
 
 
 First of all you need to install Mobox (follow instructions from the official repository): https://github.com/olegos2/mobox
