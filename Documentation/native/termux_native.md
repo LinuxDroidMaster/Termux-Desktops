@@ -174,6 +174,9 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 
 ## Troubleshooting and fixes <a name=troubleshoot></a> 
 
+### Programs/Games are too slow
+Check out [hardware acceleration guide](../HardwareAcceleration.md) for better performance
+
 ### Termux X11 randomly getting killed/shutdown
 You need to disable Phantom Processes using this guide
 
