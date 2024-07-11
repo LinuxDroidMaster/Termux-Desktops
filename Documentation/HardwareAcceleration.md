@@ -1,6 +1,7 @@
 # 📚 Index
-*  [Hardware Acceleration in Termux (Proot & Chroot)](#hardware-acceleration-prootandchroot)
-*  [Hardware Acceleration in Termux Native](#hardware-acceleration-termux-native)
+* 💻 [Hardware Acceleration in Termux (Proot & Chroot)](#hardware-acceleration-prootandchroot)
+* 💻 [Hardware Acceleration in Termux Native](#hardware-acceleration-termux-native)
+* 🪲 [Troubleshooting and fixes](#troubleshoot)
 
 <br>
 <br>  
@@ -317,3 +318,11 @@ Other tests I did:
 
 
 # Hardware Acceleration in Termux Native(#)  <a name=hardware-acceleration-termux-native></a>
+
+# Troubleshooting and fixes <a name=troubleshoot></a>
+
+### Games not registering qwerty/WASD keys
+To fix it  
+```Termux:X11 -> Preferences -> Turn on "Prefer scancodes when possible"```
+
+(another wordaround is to hold CTRL while pressing the qwerty keys although the solution above is more convenient and permanently fixes the issue)
