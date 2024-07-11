@@ -6,6 +6,7 @@
 * 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * ⬇️ [Download scripts](#easy-download-termux)
 * 🎨 [Customizations - Themes](#customizations-termux)
+* 🪲 [Troubleshooting and fixes](#troubleshoot)
 
 <br>
 
@@ -171,7 +172,7 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 /usr/share/fonts
  ```
 
-## Troubleshooting and fixes
+## Troubleshooting and fixes <a name=troubleshoot></a> 
 
 ### Termux X11 randomly getting killed/shutdown
 You need to disable Phantom Processes using this guide
