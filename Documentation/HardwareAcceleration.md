@@ -1,3 +1,5 @@
+* It is highly recommended that you read [terminology](./terminology.md) first.
+
 # 📚 Index
 * 💻 [Hardware Acceleration in Termux (Proot & Chroot)](#hardware-acceleration-prootandchroot)
 * 💻 [Hardware Acceleration in Termux Native](#hardware-acceleration-termux-native)
