@@ -319,7 +319,15 @@ Other tests I did:
 ![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
 
 
-# Hardware Acceleration in Termux Native(#)  <a name=hardware-acceleration-termux-native></a>
+# Hardware Acceleration in Native Termux  <a name=hardware-acceleration-termux-native></a>
+* Turnip(Compatible only with Adreno 610 and above with exceptions like 710, 642L, etc)
+  ```
+  apt install mesa-vulkan-icd-freedreno-dri3
+  ```
+* To run programs with turnip: 
+  ```
+  MESA_LOADER_DRIVER_OVERRIDE=zink PROGRAM
+  ```
 
 # Troubleshooting and fixes <a name=troubleshoot></a>
 
