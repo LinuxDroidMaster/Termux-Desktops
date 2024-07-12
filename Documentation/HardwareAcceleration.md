@@ -1,9 +1,22 @@
-# Hardware Acceleration in Termux
+* It is highly recommended that you read [terminology](./terminology.md) first.
+
+# 📚 Index
+* 💻 [Hardware Acceleration in Termux (Proot & Chroot)](#hardware-acceleration-prootandchroot)
+* 💻 [Hardware Acceleration in Termux Native](#hardware-acceleration-termux-native)
+* 🪲 [Troubleshooting and fixes](#troubleshoot)
+
+<br>
+<br>  
+
+---  
+<br>
+
+# Hardware Acceleration in Termux (Proot & Chroot) <a name=hardware-acceleration-prootandchroot></a>
 > [!NOTE]  
 > I would like to include here all the information I got while I am still researching the subject as the world of hardware acceleration is huge.. If you find any errors  or misconceptions, please comment on Youtube, Telegram or open an issue on this Github
 
-🔥[[Video] Hardware Acceleration Part 1 - What it is, how it is used (VIRGL AND ZINK)](https://www.youtube.com/watch?v=fgGOizUDQpY)   
-🔥[[Video] Hardware Acceleration Part 2 - (VIRGL, ZINK, TURNIP) - how can you use them](https://www.youtube.com/watch?v=07kq4RHbXrE)
+🔥[[Video] Hardware Acceleration Part 1 - What it is, how it is used (VIRGL AND ZINK)](https://www.youtube.com/watch?v=fgGOizUDQpY)  
+🔥[[Video] Hardware Acceleration Part 2 - (VIRGL, ZINK, TURNIP) - how can you use them](https://www.youtube.com/watch?v=07kq4RHbXrE)  
 🔥[[Video] Hardware Acceleration Part 3 - How to run a full Desktop with Hardware Acceleration](https://youtu.be/OiLXkvFoUJQ?feature=shared)
 
 ## 1. Install packages
@@ -304,3 +317,22 @@ Other tests I did:
 
 * SuperTuxKart tested during 30 seconds
 ![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
+
+
+# Hardware Acceleration in Native Termux  <a name=hardware-acceleration-termux-native></a>
+* Turnip(Compatible only with Adreno 610 and above with exceptions like 710, 642L, etc)
+  ```
+  apt install mesa-vulkan-icd-freedreno-dri3
+  ```
+* To run programs with turnip: 
+  ```
+  MESA_LOADER_DRIVER_OVERRIDE=zink PROGRAM
+  ```
+
+# Troubleshooting and fixes <a name=troubleshoot></a>
+
+### Games not registering qwerty/WASD keys
+To fix it  
+```Termux:X11 -> Preferences -> Turn on "Prefer scancodes when possible"```
+
+(another wordaround is to hold CTRL while pressing the qwerty keys although the solution above is more convenient and permanently fixes the issue)

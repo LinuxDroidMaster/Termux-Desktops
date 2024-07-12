@@ -1,0 +1,8 @@
+[Desktop Entry]
+
+Name=Shutdown
+Exec=sh -c "current_pid=$$; pids=$(pgrep -f 'termux.x11' | grep -v $current_pid); if [ -n \"$pids\" ]; then kill -9 $pids; fi"
+Type=Application
+Icon=xfsm-shutdown
+Terminal=true
+StartupNotify=false
