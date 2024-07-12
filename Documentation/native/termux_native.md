@@ -178,9 +178,7 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 Check out [hardware acceleration guide](../HardwareAcceleration.md) for better performance
 
 ### Termux X11 randomly getting killed/shutdown
-You need to disable Phantom Processes using this guide
-
-https://github.com/whyakari/TermuxDisableProcces
+You need to disable Phantom Processes using [this guide](https://github.com/EDLLT/TermuxDisablePhantomProcess)
 
 If Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app AND Termux X11**
 https://dontkillmyapp.com/
