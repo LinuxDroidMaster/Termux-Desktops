@@ -51,7 +51,9 @@ An open-source GPU driver for Qualcomm Adreno GPUs (comparable to the Nouveau dr
 
 ### [Turnip](https://docs.mesa3d.org/drivers/freedreno.html#turnip)
 An open-source Vulkan driver for Qualcomm Adreno GPUs. (Turnip is specifically a component of Freedreno that implements Vulkan)
+- Turnip only works on Adreno 610 and above with some exceptions like 710, 642L etc. 
 - **Zink + Turnip**: Zink forces OpenGL apps to use Vulkan drivers instead(Turnip being the Vulkan driver). This combination provides the BEST hardware acceleration currently possible.
+
 
 # [Mali GPU](https://en.wikipedia.org/wiki/Mali_(processor))
 A family of GPUs developed by ARM Holdings, used in most CPUs (e.g., Exynos, everything else).
