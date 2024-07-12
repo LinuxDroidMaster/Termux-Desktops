@@ -1,4 +1,4 @@
-* Make sure to check out the hyperlink if you'd like to learn more about a specific thing.
+* Make sure to check out the hyperlinks if you'd like to learn more.
 
 # Environments
 
