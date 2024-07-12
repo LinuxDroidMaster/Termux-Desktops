@@ -15,7 +15,7 @@
 <br>
 
 > [!NOTE]  
-> All the process to setup a Desktop Environment in Termux Native is described in this [video](https://www.youtube.com/watch?v=rq85dxMb7e4)
+> The process of setting up a Desktop Environment in Termux Native is described in this [video](https://www.youtube.com/watch?v=rq85dxMb7e4)
 
 <br>
 
