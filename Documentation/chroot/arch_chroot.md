@@ -76,6 +76,18 @@ nameserver 8.8.4.4
 mv -vf resolv.conf etc/resolv.conf
 ```
 
+- **Create `hosts` file, paste the following content and replace the original file**
+```
+vi hosts
+```
+```
+# Content
+127.0.0.1 localhost
+```
+```
+mv -vf hosts etc/hosts
+```
+
 - **Create the start script:**
 ```
 cd /data/local/tmp
