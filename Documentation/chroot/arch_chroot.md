@@ -5,10 +5,9 @@
 
 Thanks to `Frodo || 🧠🪱` user from my Discord 😄
 
-## CHROOT (🍥 DEBIAN)
+## CHROOT (🔼 ARCH)
 * 🏁 [First steps](#first-steps-chroot)
 * 💻 [Setting Arch chroot](#arch-chroot)
-* ⬇️ [Download scripts to run the environment with the desktop](#easy-download-chroot)
 
 <br>
 
@@ -102,8 +101,8 @@ busybox chroot $mnt /bin/su - root
 - **Make the script executable and run it. The prompt will change to `root@localhost`**
 
 ```
-chmod +x start_debian.sh
-sh start_debian.sh
+chmod +x start_arch.sh
+sh start_arch.sh
 ```
 
 - **Comment `CheckSpace` pacman config so we can install and update packages**
