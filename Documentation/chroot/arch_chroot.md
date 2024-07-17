@@ -48,8 +48,11 @@ pkg install pulseaudio
 cd /data/local/tmp
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 ```
-- **Uncompress the file:**
+- **Create a folder to uncompress the file:**
 ```
+mkdir chrootarch
+cd chrootarch
+
 tar xvf /data/local/tmp/ArchLinuxARM-aarch64-latest.tar.gz --numeric-owner
 ```
 
