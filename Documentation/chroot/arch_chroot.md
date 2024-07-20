@@ -177,7 +177,7 @@ sudo locale-gen
 ```
 ```
 sudo nano /etc/locale.conf
-# Replace LANG=C with LANG=en_US UTF-8
+# Replace LANG=C with LANG=en_US.UTF-8
 ```
 
 - **Install XFCE4 Desktop**
