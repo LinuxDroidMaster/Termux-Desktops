@@ -78,7 +78,7 @@ droidmaster ALL=(ALL) ALL
 
 ## 💻 How to install GNOME Desktop <a name=gnome-arch></a> 
 > [!NOTE]  
-> All the process is described in more detail in this [video - pending]().
+> All the process is described in more detail in this [video](https://youtu.be/fiJgjlbRQn4?si=ZnXwQ1805pJl5VrE).
 
 **Thanks to the user [@Windows1105](https://www.reddit.com/user/Windows1105/) for [this post in reddit](https://www.reddit.com/r/termux/comments/1bo10lb/fedora_rawhide_with_gnome_46_updated_installation/)**
 

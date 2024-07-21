@@ -3,7 +3,7 @@
 > [!NOTE]  
 > All the process is described in more detail in this [video](https://youtu.be/9_xUs6CEtVc?si=0HMJ795uduwTvgEc).
 
-## PROOT-DISTRO (⏫ POSTMARKET)
+## PROOT-DISTRO (⛰️ ALPINE)
 * 🏁 [First steps](#first-steps-alpine-proot)
 * 💻 [How to install XFCE4 Desktop](#xfce-alpine)
 * ⬇️ [Download scripts to run the desktops](#easy-download-alpine-proot)

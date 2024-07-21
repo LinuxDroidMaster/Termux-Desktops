@@ -16,7 +16,7 @@
 <br>
 
 > [!NOTE]  
-> All the process is described in this [video - pending]()
+> All the process is described in this [video](https://youtu.be/yslKsp0Rb_A?si=cR_Qq9PmUyCQTs00)
 
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
