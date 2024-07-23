@@ -75,7 +75,7 @@ xbps-install nerd-fonts
 
 * startxfce4_void.sh
 ```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_Void/startxfce4_void.sh
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_void/startxfce4_void.sh
 chmod +x startxfce4_void.sh
 ./startxfce4_void.sh
 ```
