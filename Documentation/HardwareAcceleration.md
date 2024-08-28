@@ -148,7 +148,7 @@ To install glmark2:
     </tr>
     <tr>
       <th scope="row">Command used</th>
-      <td><code>glmkar2</td>
+      <td><code>glmark2</td>
       <td><code>GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2</td>
       <td><code>GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.0 glmark2</td>
       <td><code>MESA_LOADER_DRIVER_OVERRIDE=zink TU_DEBUG=noconform glmark2</td>
