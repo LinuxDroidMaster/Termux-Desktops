@@ -142,7 +142,7 @@ mobox
 [then install the wine version you need]
 ```
 
-* Perhaps you have tried all of the above but it still didn't work. In that case, just continue messing around with mobox options, ask on [termux's reddit](https://www.reddit.com/r/termux/), [termux's discord](https://discord.gg/termux-641256914684084234) as well as [our discord](https://discord.gg/HBFXePeYfc). Let me assure you that it is possible, you just haven't explored deeply enough. Then when you finally get it to work somehow, make sure to tell everyone how you did it as it would help others!
+* Perhaps you have tried all of the above but it still didn't work. In that case, just continue messing around with mobox options, ask on [termux's reddit](https://www.reddit.com/r/termux/), [termux's discord](https://discord.gg/termux-641256914684084234), [Mishka's discord(people run a lot of games there)](https://discord.gg/ysZVT7VHKg) as well as [DroidMaster's discord](https://discord.gg/HBFXePeYfc). Let me assure you that it is possible, you just haven't explored deeply enough. Then when you finally get it to work somehow, make sure to tell everyone how you did it as it would help others!
 
 ---  
 <br>
