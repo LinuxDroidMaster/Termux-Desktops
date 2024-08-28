@@ -320,7 +320,38 @@ Other tests I did:
 
 
 # Hardware Acceleration in Native Termux  <a name=hardware-acceleration-termux-native></a>
-* Turnip(Compatible only with Adreno 610 and above with exceptions like 710, 642L, etc)
+(Freedreno and Turnip are only compatible with Adreno 610 and above with exceptions like 710, 642L, etc)
+
+## FREEDRENO(Better than Turnip)
+  #### Download freedreno & Build
+  ```
+  apt update
+  apt install python3 bison
+  pip install PyYAML
+  
+  wget https://gitlab.freedesktop.org/Pipetto-crypto/mesa/-/archive/freedreno/mesa-freedreno.tar.gz
+  
+  meson build --prefix $PREFIX -Dlibdir=$PREFIX/lib -D platforms=x11 -Dgallium-drivers=freedreno -Dfreedreno-kmds=kgsl,msm -D vulkan-drivers= -D dri3=enabled -D egl=enabled -D gles2=disabled -D glvnd=disabled -D glx=dri -D libunwind=disabled -D shared-glapi=enabled -Dshared-llvm=disabled -D microsoft-clc=disabled -D valgrind=disabled -D gles1=disabled
+  ```
+  #### Remove existing files
+  If these files exist, then remove them(this will break your zink turnip installation!)
+  ```
+  rm /data/data/com.termux/files/usr/lib/libgbm.so
+  rm /data/data/com.termux/files/usr/lib/libglapi.so
+  ```
+  
+  #### Install
+  ```
+  ninja -C build install
+  ```
+  
+  #### To run programs with freedreno kgsl:
+  ```
+  MESA_LOADER_DRIVER_OVERRIDE=kgsl PROGRAM
+  ```
+
+## TURNIP
+* Install
   ```
   apt install mesa-vulkan-icd-freedreno-dri3
   ```
