@@ -322,7 +322,20 @@ Other tests I did:
 # Hardware Acceleration in Native Termux  <a name=hardware-acceleration-termux-native></a>
 (Freedreno and Turnip are only compatible with Adreno 610 and above with exceptions like 710, 642L, etc)
 
-## FREEDRENO(Better than Turnip)
+## Turnip
+* Install
+  ```
+  apt install mesa-vulkan-icd-freedreno-dri3
+  ```
+* To run programs with turnip: 
+  ```
+  MESA_LOADER_DRIVER_OVERRIDE=zink PROGRAM
+  ```
+
+## Freedreno(Experimental)
+> [!WARNING]
+> This is still being tested, installing it will break your xfce4 desktop environment.
+> Install at your own risk!
   #### Download freedreno & Build
   ```
   apt update
@@ -348,16 +361,6 @@ Other tests I did:
   #### To run programs with freedreno kgsl:
   ```
   MESA_LOADER_DRIVER_OVERRIDE=kgsl PROGRAM
-  ```
-
-## TURNIP
-* Install
-  ```
-  apt install mesa-vulkan-icd-freedreno-dri3
-  ```
-* To run programs with turnip: 
-  ```
-  MESA_LOADER_DRIVER_OVERRIDE=zink PROGRAM
   ```
 
 # Troubleshooting and fixes <a name=troubleshoot></a>
