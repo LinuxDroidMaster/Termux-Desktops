@@ -47,12 +47,13 @@ A family of GPUs developed by Qualcomm, found ONLY in Snapdragon CPUs.
 A Gallium driver that allows OpenGL applications to run on top of Vulkan drivers (in this case, the "Vulkan driver" is Turnip).
 
 ### [Freedreno](https://docs.mesa3d.org/drivers/freedreno.html)
-An open-source GPU driver for Qualcomm Adreno GPUs (comparable to the Nouveau driver for NVIDIA GPUs).
+An open-source OpenGL GPU driver for Qualcomm Adreno GPUs (comparable to the Nouveau driver for NVIDIA GPUs).
+Freedreno runs directly on OpenGL(Unlike zink, which translates OpenGL to Vulkan)
 
 ### [Turnip](https://docs.mesa3d.org/drivers/freedreno.html#turnip)
 An open-source Vulkan driver for Qualcomm Adreno GPUs. (Turnip is specifically a component of Freedreno that implements Vulkan)
 - Turnip only works on Adreno 610 and above with some exceptions like 710, 642L etc. 
-- **Zink + Turnip**: Zink forces OpenGL apps to use Vulkan drivers instead(Turnip being the Vulkan driver). This combination provides the BEST hardware acceleration currently possible.
+- **Zink + Turnip**: Zink forces OpenGL apps to use Vulkan drivers instead(Turnip being the Vulkan driver). This combination provides the BEST hardware acceleration currently possible. (Edit: The newly compiled freedreno beats zink in performance)
 
 
 # [Mali GPU](https://en.wikipedia.org/wiki/Mali_(processor))
