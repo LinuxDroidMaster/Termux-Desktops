@@ -3,7 +3,7 @@
 # Environments
 
 ### [Chroot](https://www.youtube.com/watch?v=2wSJREC7RV8)
-A directory jail that allows you to run programs within an isolated file system structure. It's like a mini-Linux system within your existing system. It accesses the host's resources through bind mounting.
+A directory jail that allows you to run programs within an isolated file system structure. It's like a mini-Linux system within your existing system. It accesses the host's resources through bind mounting. (Requires root)
 
 ### [Proot](https://sdrausty.github.io/TermuxPRoot/docs/PRoot.html)
 A user-space implementation of chroot that allows you to run programs as if they were in a different root directory through intercepting system calls (doesn't require root).
