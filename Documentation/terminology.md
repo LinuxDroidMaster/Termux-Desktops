@@ -36,7 +36,7 @@ A newer, more efficient low-level API for graphics and compute, providing more e
 
 ### [DirectX](https://en.wikipedia.org/wiki/DirectX)
 A graphics API developed by Microsoft for use in Windows and Xbox consoles only.
-- [**dxvk (DirectX to Vulkan)**](https://en.wikipedia.org/wiki/DXVK): A translation layer which translates DirectX calls to Vulkan calls allowing you to run DirectX applications using Vulkan.
+- [**dxvk (DirectX to Vulkan)**](https://github.com/doitsujin/dxvk?tab=readme-ov-file#dxvk): A translation layer which translates DirectX calls to Vulkan calls allowing you to run DirectX applications using Vulkan.
 
 # GPUs
 
