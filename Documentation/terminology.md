@@ -88,10 +88,10 @@ A wrapper that translates desktop OpenGL calls to OpenGL ES calls.
 ## WineD3D vs DXVK
 
 ### [WineD3D](https://en.wikipedia.org/wiki/Wine_(software)#Direct3D)
-A translation layer within Wine that translates DirectX to OpenGL API calls.
+A translation layer within Wine that translates Direct3D to OpenGL API calls.
 
 ### [DXVK](https://en.wikipedia.org/wiki/DXVK)
-A translation layer which translates DirectX to Vulkan API calls.
+A translation layer which translates Direct3D to Vulkan API calls.
 
 # Benchmark/Games/Tools
 
