@@ -1,5 +1,5 @@
 * Make sure to check out the hyperlinks if you'd like to learn more.
-TODO: Add the clarification image, add mesa definition
+TODO: Add the clarification image
 
 # Environments
 
