@@ -96,7 +96,7 @@ A translation layer which translates DirectX to Vulkan API calls.
 # Benchmark/Games/Tools
 
 ### [glmark2](https://github.com/glmark2/glmark2)
-Benchmarks devices using OpenGL 2.0 and OpenGL ES.
+**GL** mark2(OpenGL Benchmark 2), a benchmarking utility for OpenGL 2.0 and OpenGL ES 2.0
 
 ### [glxgears](https://linuxreviews.org/Glxgears)
 A demo of GLX (DO NOT use this to benchmark as it was NOT designed for benchmarks, use glmark2 instead).
