@@ -46,14 +46,14 @@ A graphics API developed by Microsoft for use in Windows and Xbox consoles only.
 A family of GPUs developed by Qualcomm, found ONLY in Snapdragon CPUs.
 
 ### [Zink](https://docs.mesa3d.org/drivers/zink.html)
-A Gallium driver that allows OpenGL applications to run on top of Vulkan drivers (in this case, the "Vulkan driver" is Turnip).
+A Gallium driver that allows OpenGL applications to run on top of Vulkan drivers (in this case, the "Vulkan driver" is Turnip). [By Mesa](https://docs.mesa3d.org/index.html)
 
 ### [Freedreno](https://docs.mesa3d.org/drivers/freedreno.html)
-An open-source OpenGL GPU driver for Qualcomm Adreno GPUs (comparable to the Nouveau driver for NVIDIA GPUs).
+An open-source OpenGL GPU driver for Qualcomm Adreno GPUs (comparable to the Nouveau driver for NVIDIA GPUs). [By Mesa](https://docs.mesa3d.org/index.html)
 Freedreno runs directly on OpenGL(Unlike zink, which translates OpenGL to Vulkan)
 
 ### [Turnip](https://docs.mesa3d.org/drivers/freedreno.html#turnip)
-An open-source Vulkan driver for Qualcomm Adreno GPUs. (Turnip is specifically a component of Freedreno that implements Vulkan)
+An open-source Vulkan driver for Qualcomm Adreno GPUs. (Turnip is specifically a component of Freedreno that implements Vulkan) [By Mesa](https://docs.mesa3d.org/index.html)
 - Turnip only works on Adreno 610 and above with some exceptions like 710, 642L etc. 
 - **Zink + Turnip**: Zink forces OpenGL apps to use Vulkan drivers instead(Turnip being the Vulkan driver). This combination provides the BEST hardware acceleration currently possible. (Edit: The newly compiled freedreno beats zink in performance)
 
