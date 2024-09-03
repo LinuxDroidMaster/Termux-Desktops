@@ -37,6 +37,7 @@ A newer, more efficient low-level API for graphics and compute, providing more e
 
 ### [DirectX](https://en.wikipedia.org/wiki/DirectX)
 A graphics API developed by Microsoft for use in Windows and Xbox consoles only.
+- [**Direct3D**](https://en.wikipedia.org/wiki/Direct3D): A component of the DirectX suite that's responsible for 3D graphics
 - [**dxvk (DirectX to Vulkan)**](https://github.com/doitsujin/dxvk?tab=readme-ov-file#dxvk): A translation layer which translates DirectX calls to Vulkan calls allowing you to run DirectX applications using Vulkan.
 
 # GPUs
@@ -87,10 +88,10 @@ A wrapper that translates desktop OpenGL calls to OpenGL ES calls.
 ## WineD3D vs DXVK
 
 ### [WineD3D](https://en.wikipedia.org/wiki/Wine_(software)#Direct3D)
-A component of Wine that translates DirectX to OpenGL calls.
+A translation layer within Wine that translates DirectX to OpenGL API calls.
 
 ### [DXVK](https://en.wikipedia.org/wiki/DXVK)
-A translation layer which translates DirectX to Vulkan calls.
+A translation layer which translates DirectX to Vulkan API calls.
 
 # Benchmark/Games/Tools
 
