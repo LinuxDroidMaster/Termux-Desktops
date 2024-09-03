@@ -71,7 +71,7 @@ An open-source GPU driver project for Mali Midgard and Bifrost GPUs.
 A family of GPUs by Imagination Technologies, less common.
 - GL4ES and VirGL are the only options for running OpenGL applications on PowerVR GPUs.
 
-# Drivers/Tools/APIs
+# Rendering
 
 ### [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html)
 A software rasterizer that uses the CPU for rendering instead of the GPU, resulting in the worst performance since CPUs are not optimized for rendering tasks.
