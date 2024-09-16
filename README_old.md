@@ -1,3 +1,4 @@
+#sudo su 
 # Termux Desktops
 Collection of scripts to launch Desktops with audio in Termux X11. You have also all the information needed to install your prefered Linux Distro and connect to it in the following steps. 
 
