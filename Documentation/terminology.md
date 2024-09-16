@@ -20,7 +20,8 @@ The GNU C Library, a standard C library used by many Linux distributions. (A pro
 ### [Bionic](https://en.wikipedia.org/wiki/Bionic_(software))
 The C library (designed by Google) used in Android, differing from glibc.
 
-These differences explain why binaries built for Linux (eg, arm64 SuperTuxKart) cannot run on Android within Termux without compiling from source for Bionic specifically  
+These differences explain why binaries built for Linux (eg, arm64 SuperTuxKart) cannot run on Android within Termux without compiling from source for Bionic specifically. [Read here how](https://github.com/termux/termux-packages/wiki/Build-environment#structure) [Patched SuperTuxKart example](https://github.com/termux-user-repository/tur/tree/master/tur/supertuxkart)
+
 (UNLESS you use a [glibc-runner from glibc-repo within native Termux](https://github.com/termux-pacman/glibc-packages/wiki/About-glibc-runner-(grun)) or a [proot/chroot])
 
 # Graphic APIs
