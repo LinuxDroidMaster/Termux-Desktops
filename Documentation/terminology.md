@@ -26,7 +26,7 @@ These differences explain why binaries built for Linux (eg, arm64 SuperTuxKart) 
 
 [Patched SuperTuxKart example](https://github.com/termux-user-repository/tur/tree/master/tur/supertuxkart)
 
-(UNLESS you use a [glibc-runner from glibc-repo within native Termux](https://github.com/termux-pacman/glibc-packages/wiki/About-glibc-runner-(grun)) or a [proot/chroot])
+(UNLESS you use a [glibc-runner from glibc-repo within native Termux](https://github.com/termux-pacman/glibc-packages/wiki/About-glibc-runner-(grun)) or a [proot/chroot] which would allow you to run glibc packages without patching for bionic)
 
 # Graphic APIs
 
