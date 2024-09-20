@@ -59,7 +59,7 @@ pkg install code-oss
 ```
 
 The full list of termux packages could be found here.
-> ![TIP]
+> [!TIP]
 > The packages are organized in subdirectories. The packages inside the "packages" directory are only terminal based, "x11-packages" have GUIs, root-packages require root and so on
 
 https://github.com/termux/termux-packages
