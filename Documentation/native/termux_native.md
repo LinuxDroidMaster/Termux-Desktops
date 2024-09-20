@@ -37,9 +37,10 @@ pkg install pulseaudio
 ```
 
 Install the latest Termux:X11 build artifact(this app is needed for displaying  GUI)
+
 https://github.com/termux/termux-x11/actions/workflows/debug_build.yml
 
-Then you have to install the desktop you prefer, right now I have only test XFCE4 so here are the steps: 
+Then you have to install the desktop you prefer, right now I have only tested XFCE4 so here are the steps: 
 ```
 pkg install xfce4
 ```
