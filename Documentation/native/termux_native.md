@@ -21,7 +21,12 @@
 
 ## 🏁 First steps <a name=first-steps-termux></a>
 
+Install latest F Droid build of termux
 
+> [!WARNING]
+> (NEVER USE THE GOOGLE PLAY STORE VERSION OF TERMUX AS IT IS OUTDATED)
+
+https://f-droid.org/en/packages/com.termux/
 
 First you need to install the following packages in Termux: 
 ```
@@ -31,7 +36,11 @@ pkg install termux-x11-nightly
 pkg install pulseaudio
 ```
 
-Then you have to install the desktop you prefer, right now I have only test XFCE4 so here are the steps: 
+Install the latest Termux:X11 build artifact(this app is needed for displaying  GUI)
+
+https://github.com/termux/termux-x11/actions/workflows/debug_build.yml
+
+Then you have to install the desktop you prefer, right now I have only tested XFCE4 so here are the steps: 
 ```
 pkg install xfce4
 ```
@@ -48,6 +57,12 @@ If you want to install VS Code:
 pkg install tur-repo
 pkg install code-oss
 ```
+
+The full list of termux packages could be found here.
+> [!TIP]
+> The packages are organized in subdirectories. The packages inside the "packages" directory are only terminal based, "x11-packages" have GUIs, root-packages require root and so on
+
+https://github.com/termux/termux-packages
 
 ---  
 <br>
