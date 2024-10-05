@@ -45,11 +45,10 @@ Then you have to install the desktop you prefer, right now I have only tested XF
 pkg install xfce4
 ```
 
-If you want to install chromium browser: 
-First you need to install the following packages in Termux: 
+If you want to install the firefox browser:
 ```
 pkg install tur-repo
-pkg install chromium
+pkg install firefox
 ```
 
 If you want to install VS Code: 
