@@ -41,6 +41,8 @@ Install the latest Termux:X11 build artifact(this app is needed for displaying  
 https://github.com/termux/termux-x11/actions/workflows/debug_build.yml
 
 Then you have to install the desktop you prefer, right now I have only tested XFCE4 so here are the steps: 
+> [!NOTE]
+> xfce4 is really small and efficient which makes it take the least amount of resources compared to other desktop environments.
 ```
 pkg install xfce4
 ```
