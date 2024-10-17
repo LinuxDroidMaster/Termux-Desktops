@@ -3,8 +3,8 @@
 ## TERMUX NATIVE (NO PROOT)
 * 🏁 [First steps](#first-steps-termux)
 * 💻 [How to install apps inside Termux native desktop](#apps-termux-native)
-* 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * ⬇️ [Download scripts](#easy-download-termux)
+* 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * 🎨 [Customizations - Themes](#customizations-termux)
 * 🪲 [Troubleshooting and fixes](#troubleshoot)
 
@@ -41,15 +41,16 @@ Install the latest Termux:X11 build artifact(this app is needed for displaying  
 https://github.com/termux/termux-x11/actions/workflows/debug_build.yml
 
 Then you have to install the desktop you prefer, right now I have only tested XFCE4 so here are the steps: 
+> [!NOTE]
+> xfce4 is really small and efficient which makes it take the least amount of resources compared to other desktop environments.
 ```
 pkg install xfce4
 ```
 
-If you want to install chromium browser: 
-First you need to install the following packages in Termux: 
+If you want to install the firefox browser:
 ```
 pkg install tur-repo
-pkg install chromium
+pkg install firefox
 ```
 
 If you want to install VS Code: 
@@ -70,10 +71,26 @@ https://github.com/termux/termux-packages
 ## 💻 How to install apps inside Termux native desktop <a name=apps-termux-native></a> 
 ### You have all the information to install apps inside your native Termux Desktop in this [video](https://www.youtube.com/watch?v=JCDAGNiuy3o)
 
+---
+<br>
+
+## ⬇️ Download script to start desktop environment: <a name=easy-download-termux></a> 
+* startxfce4_termux.sh
+```
+cd ~
+
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/startxfce4_termux.sh
+```
+
+To start the desktop environment, run this
+```
+bash ~/startxfce4_termux.sh
+```
+
 ---  
 <br>
 
-## 💻 Running Windows programs on Termux native (XFCE Desktop + Mobox): <a name=mobox-with-desktop></a> 
+## 💻 (Optional) Running Windows programs on Termux Native (XFCE Desktop + Mobox): <a name=mobox-with-desktop></a> 
 > [!IMPORTANT]  
 > This whole process is explained in the following [video](https://www.youtube.com/watch?v=SfCKHWUwAr0). I highly recommend looking at it first 
 
@@ -158,15 +175,6 @@ mobox
 ```
 
 * Perhaps you have tried all of the above but it still didn't work. In that case, just continue messing around with mobox options, ask on [termux's reddit](https://www.reddit.com/r/termux/), [termux's discord](https://discord.gg/termux-641256914684084234), [Mishka's discord(people run a lot of games there)](https://discord.gg/ysZVT7VHKg) as well as [DroidMaster's discord](https://discord.gg/HBFXePeYfc). Let me assure you that it is possible, you just haven't explored deeply enough. Then when you finally get it to work somehow, make sure to tell everyone how you did it as it would help others!
-
----  
-<br>
-
-## ⬇️ Download scripts: <a name=easy-download-termux></a> 
-* startxfce4_termux.sh
-```
-wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/termux_native/startxfce4_termux.sh
-```
 
 ---  
 <br>
