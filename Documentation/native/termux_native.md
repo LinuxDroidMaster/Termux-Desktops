@@ -87,6 +87,13 @@ To start the desktop environment, run this
 bash ~/startxfce4_termux.sh
 ```
 
+Tip: If you have an older version of Android try this script instead: 
+```
+cd ~
+
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/refs/heads/main/scripts/termux_native/startxfce4_termux(old-android).sh
+```
+
 ---  
 <br>
 
