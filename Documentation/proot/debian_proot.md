@@ -34,7 +34,7 @@ You can check the video described in the First Steps section. The written steps 
 pkg update
 pkg install proot-distro
 ```
-3. Install Debian (or the distor you prefer)
+3. Install Debian (or the distro you prefer)
 ```
 proot-distro install debian
 ```
