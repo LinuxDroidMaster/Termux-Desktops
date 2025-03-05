@@ -39,10 +39,10 @@ virgl_test_server_android &
 * [Turnip (Adreno GPU 6XX/7XX compatible only)](https://www.reddit.com/r/termux/comments/19dpqas/proot_linux_only_dri3_patch_mesa_turnip_driver/)
 It is not needed to initialize any graphical server. Follow the steps described in the reddit post. As as summary:
 
-  1. Download Turnip Driver: [mesa-vulkan-kgsl_23.3.0-devel-20230905_arm64.deb](https://drive.google.com/file/d/1f4pLvjDFcBPhViXGIFoRE3Xc8HWoiqG-/view?usp=drive_link)
+  1. Download Turnip Driver: [mesa-vulkan-kgsl_24.1.0-devel-20240120_arm64.deb](https://drive.google.com/file/d/1f4pLvjDFcBPhViXGIFoRE3Xc8HWoiqG-/view?usp=drive_link)
   2. Install it in proot-distro (for example in Debian the command is as follows)
 ```
-sudo dpkg -i mesa-vulkan-kgsl_23.3.0-devel-20230905_arm64.deb
+sudo dpkg -i mesa-vulkan-kgsl_24.1.0-devel-20240120_arm64.deb
 ```
   In case you want to remove the driver: 
 ```
@@ -318,6 +318,32 @@ Other tests I did:
 * SuperTuxKart tested during 30 seconds
 ![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
 
+
+# Hardware Acceleration in Archlinux chroot <a name=hardware-acceleration-arch-linux></a>
+(Turnip are only compatible with Adreno 610 and above with exceptions like 710, 642L, etc)
+
+## Turnip
+* 1. Install packages
+  ```
+  sudo pacman -S unzip mesa vulkan-icd-loader vulkan-headers
+  ```
+* 2. Download turnip driver
+  ```
+  wget https://github.com/MatrixhKa/mesa-turnip/releases/download/24.1.0/mesa-turnip-kgsl-24.1.0-devel.zip
+  ```
+* 3. Setup
+  ```
+  unzip mesa-* -d turnip/
+  cd turnip/
+  sudo mkdir -p /usr/share/vulkan/icd.d/
+  sudo mv libvulkan_freedreno.so /usr/lib/
+  sudo mv freedreno_icd.aarch64.json /usr/share/vulkan/icd.d/
+  ```
+## Enjoy😉.
+(If everything went well, you will see something like this)
+
+![Screenshot_20250305-195359_Termux_X11](https://github.com/user-attachments/assets/bacd609c-ef15-4588-9cd8-ebccae602db6)
+![Screenshot_20250305-195524_Termux_X11](https://github.com/user-attachments/assets/30de9ef7-4f80-45c4-b659-17ec3621eeff)
 
 # Hardware Acceleration in Native Termux  <a name=hardware-acceleration-termux-native></a>
 (Freedreno and Turnip are only compatible with Adreno 610 and above with exceptions like 710, 642L, etc)
