@@ -319,7 +319,7 @@ Other tests I did:
 ![SUPERTUXKART comparison](./images/supertuxkart_comparison.png)
 
 
-# Hardware Acceleration in Archlinux chroot <a name=hardware-acceleration-arch-linux></a>
+# Hardware Acceleration in Archlinux (Proot & Chroot) <a name=hardware-acceleration-arch-linux></a>
 (Turnip are only compatible with Adreno 610 and above with exceptions like 710, 642L, etc)
 
 ## Turnip
