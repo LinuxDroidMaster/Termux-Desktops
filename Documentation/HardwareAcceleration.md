@@ -339,6 +339,11 @@ Other tests I did:
   sudo mv libvulkan_freedreno.so /usr/lib/
   sudo mv freedreno_icd.aarch64.json /usr/share/vulkan/icd.d/
   ```
+* Extra.  
+ (You can add variables in the startup script)
+  ```
+  busybox chroot $mnt /bin/su - matrixz -c 'export DISPLAY=:0 && export PULSE_SERVER=127.0.0.1 && dbus-launch --exit-with-session && TU_DEBUG=noconform ZINK_DESCRIPTORS=lazy ZINK_DEBUG=compact openbox-session'
+  ```
 ## Enjoy😉.
 (If everything went well, you will see something like this)
 
