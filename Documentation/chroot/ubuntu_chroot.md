@@ -172,7 +172,7 @@ EOF
 
 14. Exit chroot and modify  the `start.sh` script created on step `5`: 
 ```
-nano /data/local/tmp/start.sh
+toybox vi /data/local/tmp/start.sh
 ```
 Change the last line `busybox chroot $UBUNTUPATH /bin/su - root` to this line: 
 ```
