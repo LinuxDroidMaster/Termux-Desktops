@@ -184,13 +184,12 @@ If you installed other Desktop Environment you need to change the `startxfce4` p
 ```
 XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
 sudo busybox mount --bind $PREFIX/tmp /data/local/tmp/chrootubuntu/tmp
-
+sudo chmod 777 $PREFIX/tmp
 su -c "sh /data/local/tmp/start.sh"
 ```
 
 Now you are inside chroot. Execute this: 
 ```
-sudo chmod -R 777 /tmp
 export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713
 dbus-launch --exit-with-session startxfce4 &
 ```
