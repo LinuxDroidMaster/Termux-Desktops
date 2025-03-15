@@ -176,7 +176,7 @@ toybox vi /data/local/tmp/start.sh
 ```
 Change the last line `busybox chroot $UBUNTUPATH /bin/su - root` to this line: 
 ```
-busybox chroot $UBUNTUPATH /bin/su - user -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
+busybox chroot $UBUNTUPATH /bin/su - droidmaster -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
 ```
 If you installed other Desktop Environment you need to change the `startxfce4` part. For example for KDE Plasma it should be `startplasma-x11`.
 
