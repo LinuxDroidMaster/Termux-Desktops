@@ -54,7 +54,6 @@ cd /data/local/tmp/chrootubuntu
 3. Download [Ubuntu 24.04 LTS](https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/) rootfs: 
 ```
 curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.2-base-arm64.tar.gz --output ubuntu.tar.gz
-
 ```
 
 4. Unzip the downloaded file and create some folders to mount the sdcard
