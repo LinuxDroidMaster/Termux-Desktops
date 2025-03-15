@@ -188,12 +188,6 @@ sudo chmod 777 $PREFIX/tmp
 su -c "sh /data/local/tmp/start.sh"
 ```
 
-Now you are inside chroot. Execute this: 
-```
-export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713
-dbus-launch --exit-with-session startxfce4 &
-```
-
 16. Open Termux X11 and check that you can use the desktop environment. 
 </details>
 
