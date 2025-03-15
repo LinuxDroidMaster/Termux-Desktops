@@ -163,8 +163,6 @@ sudo apt install xubuntu-desktop
 sudo apt install kubuntu-desktop
 ```
 
-> [!NOTE]
-> This step is for Ubuntu only
 13. Disable Snapd (it can't be used on Termux): 
 ```
 apt-get autopurge snapd
