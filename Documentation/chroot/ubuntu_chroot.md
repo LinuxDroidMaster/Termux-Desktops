@@ -58,9 +58,9 @@ mkdir /data/local/tmp/chrootubuntu
 cd /data/local/tmp/chrootubuntu
 ```
 
-3. Download [Ubuntu 22.0.4 LTS](https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/) rootfs: 
+3. Download [Ubuntu 24.04 LTS](https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/) rootfs: 
 ```
-curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
+curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.2-base-arm64.tar.gz --output ubuntu.tar.gz
 
 ```
 
