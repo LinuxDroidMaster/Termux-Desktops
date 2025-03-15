@@ -61,7 +61,6 @@ curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-2
 tar xpvf ubuntu.tar.gz --numeric-owner
 
 mkdir sdcard
-mkdir dev/shm
 ```
 
 5. Create a start script: 
@@ -85,6 +84,7 @@ busybox mount --bind /proc $UBUNTUPATH/proc
 busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
 
 # /dev/shm for Electron apps
+mkdir -p /dev/shm
 busybox mount -t tmpfs -o size=256M tmpfs $UBUNTUPATH/dev/shm
 
 # Mount sdcard
