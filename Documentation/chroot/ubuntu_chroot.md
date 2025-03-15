@@ -66,7 +66,7 @@ mkdir sdcard
 5. Create a start script: 
 ```
 cd ../
-vi start.sh
+toybox vi start.sh
 ```
 Copy and paste the following: 
 ```
