@@ -119,7 +119,7 @@ apt install nano vim net-tools sudo git
 
 8. Setup timezone: 
 ```
-ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+dpkg-reconfigure tzdata
 ```
 
 9. Create a new user called `droidmaster` (or the name you prefer)
