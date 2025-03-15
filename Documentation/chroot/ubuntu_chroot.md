@@ -6,7 +6,6 @@
 ## CHROOT (🟠 UBUNTU)
 * 🏁 [First steps](#first-steps-chroot)
 * 💻🟠 [Setting Ubuntu chroot](#ubuntu-chroot)
-* ⬇️ [Download Ubuntu chroot](#distros-chroot)
 * 🎨 [Customizations (Nerdfonts, XFCE4 terminal color palettes, etc)](#customizations-chroot)
 
 <br>
@@ -204,16 +203,6 @@ dbus-launch --exit-with-session startxfce4 &
 
 16. Open Termux X11 and check that you can use the desktop environment. 
 </details>
-
----  
-<br>
-
-## ⬇️ Download Ubuntu Chroot <a name=distros-chroot></a>
-
-* Download Ubuntu 22.04 rootfs: 
-```
-curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
-```
 
 ---  
 <br>
