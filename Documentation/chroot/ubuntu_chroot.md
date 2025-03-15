@@ -132,7 +132,7 @@ passwd droidmaster
 
 10. Add the created user to sudoers file to have superuser privileges: 
 ```
-nano /etc/sudoers
+visudo
 ```
 Add this line: 
 ```
