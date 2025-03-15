@@ -26,13 +26,7 @@
 3. Then you need to install the following packages in Termux: 
 
 ```
-pkg update
-pkg install x11-repo
-pkg install root-repo
-pkg install termux-x11-nightly
-pkg update
-pkg install tsu
-pkg install pulseaudio
+pkg update && pkg install x11-repo root-repo && pkg install tsu pulseaudio termux-x11-nightly
 ```
 
 
