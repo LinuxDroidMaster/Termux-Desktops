@@ -141,6 +141,7 @@ droidmaster ALL=(ALL:ALL) ALL
 
 11. Switch to the created user: 
 ```
+su droidmaster
 sudo apt install locales
 sudo locale-gen en_US.UTF-8
 ```
@@ -157,7 +158,7 @@ sudo apt install kubuntu-desktop
 
 13. Disable Snapd (it can't be used on Termux): 
 ```
-apt-get autopurge snapd
+sudo apt-get autopurge snapd
 
 cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
 # To prevent repository packages from triggering the installation of Snap,
@@ -184,7 +185,7 @@ If you installed other Desktop Environment you need to change the `startxfce4` p
 XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
 sudo busybox mount --bind $PREFIX/tmp /data/local/tmp/chrootubuntu/tmp
 
-sh /data/local/tmp/start.sh
+su -c "sh /data/local/tmp/start.sh"
 ```
 
 Now you are inside chroot. Execute this: 
