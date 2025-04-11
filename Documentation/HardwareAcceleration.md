@@ -344,6 +344,21 @@ Other tests I did:
   ```
   busybox chroot $mnt /bin/su - matrixz -c 'export DISPLAY=:0 && export PULSE_SERVER=127.0.0.1 && dbus-launch --exit-with-session && TU_DEBUG=noconform ZINK_DESCRIPTORS=lazy ZINK_DEBUG=compact openbox-session'
   ```
+
+* Extra on xfce.
+  you need to disable the compositor, otherwise you will get black screen
+  setting -> windows manager tweak -> compositor -> uncheck enable composit 
+
+  if you already got black screen, enter chroot root
+  ```
+  pacman -R vulkan-icd-loader
+  ```
+
+  start termux desktop again, then disable compositor, after that you can install vulkan-icd-loader again.
+  ```
+  pacman -S vulkan-icd-loader
+  ```
+    
 ## Enjoy😉.
 (If everything went well, you will see something like this)
 
