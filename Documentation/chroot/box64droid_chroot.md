@@ -94,7 +94,7 @@ dbus-launch --exit-with-session startxfce4 &
 
 Execute it
 ```
-chmod +x starGUI.sh
+chmod +x startGUI.sh
 ./startGUI.sh
 ```
 
