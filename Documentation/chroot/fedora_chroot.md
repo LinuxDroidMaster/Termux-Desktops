@@ -62,7 +62,6 @@ tar xvf /data/local/tmp/fedora-20250608.tar --numeric-owner
 
 - **Create needed folders:**
 ```
-mkdir media
 mkdir media/sdcard
 mkdir dev/shm
 ```
