@@ -169,6 +169,12 @@ LANG="en_US.UTF-8"
 sudo dnf group install input-methods multimedia xfce-apps xfce-extra-plugins xfce-media xfce-office xfce-desktop desktop-accessibility fonts
 ```
 
+- **Remove unusable packages**
+- **This package does not work in a chroot and will generate a lot of garbage in the logs.**
+```
+sudo dnf remove localsearch
+```
+
 - **Exit the `chroot` environment and modify the `start_fedora.sh` file that we created previously. Comment the last line and add the following one**
 
 ```
