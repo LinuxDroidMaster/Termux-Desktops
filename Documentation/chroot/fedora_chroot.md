@@ -114,7 +114,7 @@ busybox mount -t tmpfs /cache $mnt/var/cache
 busybox mount -t tmpfs -o size=256M tmpfs $mnt/dev/shm
 
 # chroot into Fedora
-busybox chroot $mnt /bin/su - root
+busybox chroot $mnt /bin/sudo -i
 ```
 
 - **Make the script executable and run it. The prompt will change to `[root@localhost ~]#`**
@@ -174,7 +174,7 @@ sudo dnf group install xfce-desktop desktop-accessibility standard fonts
 ```
 vi start_fedora.sh
 
-#busybox chroot $mnt /bin/su - root
+#busybox chroot $mnt /bin/sudo -i
 busybox chroot $mnt /bin/su - droidmaster -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
 ```
 
