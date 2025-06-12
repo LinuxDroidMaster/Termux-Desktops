@@ -141,7 +141,6 @@ dnf install vim net-tools git
 - **Create a new user, in this case `droidmaster`**
 ```
 groupadd storage
-groupadd wheel
 useradd -m -g users -G wheel,audio,video,storage,aid_inet -s /bin/bash droidmaster
 passwd droidmaster
 ```
