@@ -4,7 +4,7 @@
 # 📚 Index
 ## CHROOT (🔵 FEDORA)
 * 🏁 [First steps](#first-steps-chroot)
-* 🫚 [Create fedora rootfs tarball](#create-rootfs)
+* 🫚 [Get fedora rootfs tarball](#get-rootfs)
 * 💻 [Setting Fedora chroot](#fedora-chroot)
 
 <br>
@@ -20,10 +20,9 @@
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
 
-1. **You will need a machine running fedora. You can use a live cd or a virtual machine to perform this operation without actually installing fedora.**
-2. **You need to have your device <u>rooted</u>.**
-3. **You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.**
-4. **Then you need to install the following packages in Termux:** 
+1. **You need to have your device <u>rooted</u>.**
+2. **You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.**
+3. **Then you need to install the following packages in Termux:** 
 ```
 pkg update && pkg install x11-repo root-repo && pkg install tsu pulseaudio termux-x11-nightly openssh
 ```
@@ -31,48 +30,34 @@ pkg update && pkg install x11-repo root-repo && pkg install tsu pulseaudio termu
 ---  
 <br>
 
-## 🫚 Create fedora rootfs tarball <a name=create-rootfs></a>
-- **Since Fedora does not provide a minimal rootfs by default, we will create it ourselves.**
-- **Enter fedora terminal**
-- **Create a folder to create rootfs**
-```
-sudo mkdir /tmp/rootfs
-```
-- **Run the following command to generate rootfs**
-```
-sudo dnf --releasever=41 --installroot=/tmp/rootfs/ --forcearch=aarch64 --use-host-config group install core
-```
-- **Pack rootfs as tarball**
-```
-cd /tmp/rootfs
-sudo tar -C . -czf fedora-aarch64-rootfs.tar.gz .
-```
-- **Send rootfs to your device, in this case, scp is used to transfer the file.**
-- **You can use any method you know to transfer rootfs**
-- **Run the following command in termux**
-```
-sshd
-passwd
-```
-- **Run the following command in fedora**
+## 🫚 Get fedora rootfs tarball <a name=get-rootfs></a>
+
+- **In this guide, we'll use `fedora-20250608.tar` as an example.**
 > [!NOTE]  
-> `your-device-ip`It should be the actual IP address of the device, which you can see in Settings -> About phone -> IP address
-```
-scp -P 8022 /tmp/rootfs/fedora-aarch64-rootfs.tar.gz a@your-device-ip:~/
-```
+> The date in the filename may vary — make sure to use the actual filename from the site.
+
+1. **Go to `https://github.com/fedora-cloud/docker-brew-fedora/tree/42/aarch64` and check the images, it should look like `fedora-20250608.tar`**
+2. **Tap it**
+3. **Long-press `view raw`, then tap `Copy link address` to copy the download link**
+
 ## 💻 Setting Fedora chroot <a name=fedora-chroot></a>
 - **Enter Termux super user terminal with the command `su`**
 - **Navigate to the folder where you want to install Fedora Chroot and extract the rootfs tar ball.**
 ```
 cd /data/local/tmp
-cp $PREFIX/../home/fedora-aarch64-rootfs.tar.gz .
 ```
+- **Download the rootfs tarball using the link you copied earlier (replace the URL below):**  
+```
+wget https://github.com/fedora-cloud/docker-brew-fedora/raw/refs/heads/42/aarch64/fedora-20250608.tar
+```
+> 💡 *Replace the URL with the actual link you copied in the previous step.*
+
 - **Create a folder to uncompress the file:**
 ```
 mkdir chrootfedora
 cd chrootfedora
 
-tar xvf /data/local/tmp/fedora-aarch64-rootfs.tar.gz --numeric-owner
+tar xvf /data/local/tmp/fedora-20250608.tar --numeric-owner
 ```
 
 - **Create needed folders:**
