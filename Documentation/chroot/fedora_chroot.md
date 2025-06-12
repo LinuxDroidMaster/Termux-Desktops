@@ -166,7 +166,7 @@ LANG="en_US.UTF-8"
 
 - **Install XFCE4 Desktop**
 ```
-sudo dnf group install xfce-desktop desktop-accessibility standard fonts
+sudo dnf group install input-methods multimedia xfce-apps xfce-extra-plugins xfce-media xfce-office xfce-desktop desktop-accessibility fonts
 ```
 
 - **Exit the `chroot` environment and modify the `start_fedora.sh` file that we created previously. Comment the last line and add the following one**
