@@ -134,7 +134,8 @@ usermod -G 3003 -a root
 - **Upgrade the system and install common tools**
 ```
 dnf update
-dnf install vim net-tools sudo git
+dnf group install admin-tools standard core
+dnf install vim net-tools git
 ```
 
 - **Create a new user, in this case `droidmaster`**
