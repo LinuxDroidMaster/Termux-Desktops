@@ -157,7 +157,7 @@ droidmaster  ALL=(ALL:ALL) ALL
 - **Fix locales to avoid weird characters:**
 ```
 dnf install glibc-langpack-en
-sudo nano /etc/locale.conf
+sudo vi /etc/locale.conf
 ```
 ```
 # Paste this 
