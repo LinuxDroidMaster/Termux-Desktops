@@ -202,11 +202,13 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 # Tip:  /usr is at the same level as /home
 /usr/share/fonts
  ```
+<br>
 
-
-## 🔥 Hardware Acceleration Help <a name=hardware-acceleration></a> 
+## 🔥 Hardware Acceleration <a name=hardware-acceleration></a> 
 
 If programs or games are too slow, follow the [hardware acceleration guide](../HardwareAcceleration.md) to improve performance.
+
+<br>
 
 ## Troubleshooting and fixes <a name=troubleshoot></a> 
 
