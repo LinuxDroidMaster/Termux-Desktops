@@ -106,7 +106,7 @@ Consider your requirements and preferences when choosing the Linux environment f
 ---  
 <br>
 
-## 🐧 How to install proot distributions: Ubuntu, Debian, Arch, Kali Nethunter, Parrot OS, PostMarket OS <a name=proot-distributions></a>
+## 🐧 How to install proot distributions: Ubuntu, Debian, Arch, Kali Nethunter, Parrot OS, PostMarket OS <a name=proot-distro></a>
 
 Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
 
@@ -117,7 +117,7 @@ Click on the different icons to see how you can install the distribution of your
 ---  
 <br>
 
-## 💀 How to install Chroot distributions: Ubuntu, Debian, Box64Droid <a name=chroot-distributions></a>
+## 💀 How to install Chroot distributions: Ubuntu, Debian, Box64Droid <a name=chroot></a>
 
 Click on the different icons to see how you can install the distribution of your choice. All of them have a video explaining the process 
 
