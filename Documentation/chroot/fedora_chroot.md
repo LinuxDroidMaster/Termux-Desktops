@@ -4,7 +4,7 @@
 # 📚 Index
 ## CHROOT (🔵 FEDORA)
 * 🏁 [First steps](#first-steps-chroot)
-* 🫚 [Create fedora rootfs tarball](#create-rootfs)
+* 🫚 [Get fedora rootfs tarball](#get-rootfs)
 * 💻 [Setting Fedora chroot](#fedora-chroot)
 
 <br>
@@ -20,10 +20,9 @@
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
 
-1. **You will need a machine running fedora. You can use a live cd or a virtual machine to perform this operation without actually installing fedora.**
-2. **You need to have your device <u>rooted</u>.**
-3. **You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.**
-4. **Then you need to install the following packages in Termux:** 
+1. **You need to have your device <u>rooted</u>.**
+2. **You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.**
+3. **Then you need to install the following packages in Termux:** 
 ```
 pkg update && pkg install x11-repo root-repo && pkg install tsu pulseaudio termux-x11-nightly openssh
 ```
@@ -31,53 +30,38 @@ pkg update && pkg install x11-repo root-repo && pkg install tsu pulseaudio termu
 ---  
 <br>
 
-## 🫚 Create fedora rootfs tarball <a name=create-rootfs></a>
-- **Since Fedora does not provide a minimal rootfs by default, we will create it ourselves.**
-- **Enter fedora terminal**
-- **Create a folder to create rootfs**
-```
-sudo mkdir /tmp/rootfs
-```
-- **Run the following command to generate rootfs**
-```
-sudo dnf --releasever=41 --installroot=/tmp/rootfs/ --forcearch=aarch64 --use-host-config group install core
-```
-- **Pack rootfs as tarball**
-```
-cd /tmp/rootfs
-sudo tar -C . -czf fedora-aarch64-rootfs.tar.gz .
-```
-- **Send rootfs to your device, in this case, scp is used to transfer the file.**
-- **You can use any method you know to transfer rootfs**
-- **Run the following command in termux**
-```
-sshd
-passwd
-```
-- **Run the following command in fedora**
+## 🫚 Get fedora rootfs tarball <a name=get-rootfs></a>
+
+- **In this guide, we'll use `fedora-20250608.tar` as an example.**
 > [!NOTE]  
-> `your-device-ip`It should be the actual IP address of the device, which you can see in Settings -> About phone -> IP address
-```
-scp -P 8022 /tmp/rootfs/fedora-aarch64-rootfs.tar.gz a@your-device-ip:~/
-```
+> The date in the filename may vary — make sure to use the actual filename from the site.
+
+1. **Go to `https://github.com/fedora-cloud/docker-brew-fedora/tree/42/aarch64` and check the images, it should look like `fedora-20250608.tar`**
+2. **Tap it**
+3. **Long-press `view raw`, then tap `Copy link address` to copy the download link**
+
 ## 💻 Setting Fedora chroot <a name=fedora-chroot></a>
 - **Enter Termux super user terminal with the command `su`**
 - **Navigate to the folder where you want to install Fedora Chroot and extract the rootfs tar ball.**
 ```
 cd /data/local/tmp
-cp $PREFIX/../home/fedora-aarch64-rootfs.tar.gz .
 ```
+- **Download the rootfs tarball using the link you copied earlier (replace the URL below):**  
+```
+wget https://github.com/fedora-cloud/docker-brew-fedora/raw/refs/heads/42/aarch64/fedora-20250608.tar
+```
+> 💡 *Replace the URL with the actual link you copied in the previous step.*
+
 - **Create a folder to uncompress the file:**
 ```
 mkdir chrootfedora
 cd chrootfedora
 
-tar xvf /data/local/tmp/fedora-aarch64-rootfs.tar.gz --numeric-owner
+tar xvf /data/local/tmp/fedora-20250608.tar --numeric-owner
 ```
 
 - **Create needed folders:**
 ```
-mkdir media
 mkdir media/sdcard
 mkdir dev/shm
 ```
@@ -130,7 +114,7 @@ busybox mount -t tmpfs /cache $mnt/var/cache
 busybox mount -t tmpfs -o size=256M tmpfs $mnt/dev/shm
 
 # chroot into Fedora
-busybox chroot $mnt /bin/su - root
+busybox chroot $mnt /bin/sudo -i
 ```
 
 - **Make the script executable and run it. The prompt will change to `[root@localhost ~]#`**
@@ -150,13 +134,13 @@ usermod -G 3003 -a root
 - **Upgrade the system and install common tools**
 ```
 dnf update
-dnf install vim net-tools sudo git
+dnf group install admin-tools standard core
+dnf install vim net-tools git
 ```
 
 - **Create a new user, in this case `droidmaster`**
 ```
 groupadd storage
-groupadd wheel
 useradd -m -g users -G wheel,audio,video,storage,aid_inet -s /bin/bash droidmaster
 passwd droidmaster
 ```
@@ -173,7 +157,7 @@ droidmaster  ALL=(ALL:ALL) ALL
 - **Fix locales to avoid weird characters:**
 ```
 dnf install glibc-langpack-en
-sudo nano /etc/locale.conf
+sudo vi /etc/locale.conf
 ```
 ```
 # Paste this 
@@ -182,7 +166,13 @@ LANG="en_US.UTF-8"
 
 - **Install XFCE4 Desktop**
 ```
-sudo dnf group install xfce-desktop desktop-accessibility standard fonts
+sudo dnf group install input-methods multimedia xfce-apps xfce-extra-plugins xfce-media xfce-office xfce-desktop desktop-accessibility fonts
+```
+
+- **Remove unusable packages**
+- **This package does not work in a chroot and will generate a lot of garbage in the logs.**
+```
+sudo dnf remove localsearch
 ```
 
 - **Exit the `chroot` environment and modify the `start_fedora.sh` file that we created previously. Comment the last line and add the following one**
@@ -190,7 +180,7 @@ sudo dnf group install xfce-desktop desktop-accessibility standard fonts
 ```
 vi start_fedora.sh
 
-#busybox chroot $mnt /bin/su - root
+#busybox chroot $mnt /bin/sudo -i
 busybox chroot $mnt /bin/su - droidmaster -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
 ```
 
