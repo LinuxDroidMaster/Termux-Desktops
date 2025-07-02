@@ -6,11 +6,12 @@
 * ⬇️ [Download scripts](#easy-download-termux)
 * 💻 [Running Windows programs on Termux native (XFCE Desktop + Mobox)](#mobox-with-desktop)
 * 🎨 [Customizations - Themes](#customizations-termux)
+* 🔥 [Hardware Acceleration](#hardware-acceleration)
 * 🪲 [Troubleshooting and fixes](#troubleshoot)
 
 <br>
 
----  
+
 ---  
 <br>
 
@@ -201,16 +202,20 @@ curl -fsSL https://raw.githubusercontent.com/arnavgr/termux-nf/main/install.sh |
 # Tip:  /usr is at the same level as /home
 /usr/share/fonts
  ```
+<br>
+
+## 🔥 Hardware Acceleration <a name=hardware-acceleration></a> 
+
+If programs or games are too slow, follow the [hardware acceleration guide](../HardwareAcceleration.md) to improve performance.
+
+<br>
 
 ## Troubleshooting and fixes <a name=troubleshoot></a> 
-
-### Programs/Games are too slow
-Check out [hardware acceleration guide](../HardwareAcceleration.md) for better performance
 
 ### Termux X11 randomly getting killed/shutdown
 You need to disable Phantom Processes using [this guide](https://github.com/EDLLT/TermuxDisablePhantomProcess)
 
-If Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app AND Termux X11**
+If Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app and Termux X11**
 https://dontkillmyapp.com/
 
 WARNING: Doing the above(Disabling Phantom Process killer, following dontkillmyapp) would mean that the Termux X11 session WILL NEVER shutdown unless YOU manually
