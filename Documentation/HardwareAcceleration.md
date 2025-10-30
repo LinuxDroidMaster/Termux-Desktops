@@ -384,7 +384,7 @@ Other tests I did:
 > Install at your own risk!
   #### Download freedreno & Build
   ```
-  apt update
+  apt update 
   apt install python3 bison
   pip install PyYAML
   
