@@ -385,8 +385,13 @@ Other tests I did:
   #### Download freedreno & Build
   ```
   apt update 
-  apt install python3 bison
+  apt install python3 bison binutils flex
+
   pip install PyYAML
+  pip install mako
+  pip install packaging
+
+
   
   wget https://gitlab.freedesktop.org/Pipetto-crypto/mesa/-/archive/freedreno/mesa-freedreno.tar.gz
 cd mesa-freedreno
