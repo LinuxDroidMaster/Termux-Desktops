@@ -155,6 +155,7 @@ if [ ! -f $WINEPREFIX/moboxmeta/dxdlls-fix-applied ]; then
 fi
 
 load_configs
+export PULSE_SERVER=127.0.0.1
 
 ln -sf $(df -H | grep -o "/storage/....-....") "$WINEPREFIX/dosdevices/f:" &>/dev/null
 

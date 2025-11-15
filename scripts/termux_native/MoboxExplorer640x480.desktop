@@ -1,0 +1,11 @@
+[Desktop Entry]
+
+Name=Explorer 640x480
+
+Exec=wine explorer /desktop=640x480,640x480
+Type=Application
+Icon=input-gaming
+Comment=
+Path=
+Terminal=false
+StartupNotify=false
