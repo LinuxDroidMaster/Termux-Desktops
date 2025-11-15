@@ -384,13 +384,38 @@ Other tests I did:
 > Install at your own risk!
   #### Download freedreno & Build
   ```
-  apt update
-  apt install python3 bison
+  apt update 
+  apt install python3 bison binutils flex
+
   pip install PyYAML
+  pip install mako
+  pip install packaging
+
+
   
   wget https://gitlab.freedesktop.org/Pipetto-crypto/mesa/-/archive/freedreno/mesa-freedreno.tar.gz
-  
-  meson build --prefix $PREFIX -Dlibdir=$PREFIX/lib -D platforms=x11 -Dgallium-drivers=freedreno -Dfreedreno-kmds=kgsl,msm -D vulkan-drivers= -D dri3=enabled -D egl=enabled -D gles2=disabled -D glvnd=disabled -D glx=dri -D libunwind=disabled -D shared-glapi=enabled -Dshared-llvm=disabled -D microsoft-clc=disabled -D valgrind=disabled -D gles1=disabled
+cd mesa-freedreno
+
+meson setup build \
+  --prefix=$PREFIX \
+  -Dlibdir=$PREFIX/lib \
+  -Dplatforms=x11 \
+  -Dgallium-drivers=freedreno \
+  -Dfreedreno-kmds=kgsl,msm \
+  -Dvulkan-drivers= \
+  -Degl=enabled \
+  -Dgles2=disabled \
+  -Dglvnd=disabled \
+  -Dglx=dri \
+  -Dlibunwind=disabled \
+  -Dshared-glapi=enabled \
+  -Dshared-llvm=disabled \
+  -Dmicrosoft-clc=disabled \
+  -Dvalgrind=disabled \
+  -Dgles1=disabled
+
+
+
   ```
   #### Remove existing files
   If these files exist, then remove them(this will break your zink turnip installation!)

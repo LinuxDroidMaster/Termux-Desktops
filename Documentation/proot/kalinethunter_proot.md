@@ -11,7 +11,6 @@
 <br>
 
 ---  
----  
 
 <br>
 
@@ -24,6 +23,7 @@ pkg install x11-repo
 pkg install termux-x11-nightly
 pkg install pulseaudio
 pkg install proot-distro
+
 ```
 
 Then install Kali Linux Nethunter with the steps described in the [official web](https://www.kali.org/docs/nethunter/nethunter-rootless/): 
