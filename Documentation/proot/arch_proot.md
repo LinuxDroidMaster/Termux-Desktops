@@ -56,9 +56,9 @@ pacman -S xfce4
 ```
 pd login archlinux
 ```
-* Install the packages needed (if you want it lighter you can just install the first packages `pacman -S plasma-desktop sudo dbus`)
+* Install the packages needed (if you want it lighter you can just install the first packages `pacman -S plasma-desktop sudo dbus kwin-x11`)
 ```
-pacman -S plasma-desktop sudo dbus kde-applications kde-graphics kde-utilities konsole thunar
+pacman -S plasma-desktop sudo dbus kwin-x11 kde-applications kde-graphics kde-utilities konsole thunar
 ```
 * Add a new user and set a password
 ```
