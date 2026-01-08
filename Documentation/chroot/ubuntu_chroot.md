@@ -17,23 +17,19 @@
 <br>
 
 > [!NOTE]  
-> All the process is described in this [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
+> All the process is described in this(outdated) [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
 
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
 
 1. First you need to have your device <u>rooted</u>.
-2. You need to flash [Busybox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox/releases) with Magisk.
+2. You need to flash [Busybox NDK](https://github.com/Magisk-Modules-Repo/busybox-ndk) with Magisk.
 3. Then you need to install the following packages in Termux: 
 
 ```
-pkg update
-pkg install x11-repo
-pkg install root-repo
-pkg install termux-x11-nightly
-pkg update
-pkg install tsu
-pkg install pulseaudio
+pkg update \
+&& pkg install x11-repo root-repo \
+&& pkg install termux-x11-nightly sudo pulseaudio
 ```
 
 
@@ -42,7 +38,7 @@ pkg install pulseaudio
 
 ## 💻🟠 Setting Ubuntu chroot <a name=ubuntu-chroot></a>
 
-This steps are from Ivon's blog but I modified a little bit some lines. These are the post used: 
+These steps are from Ivon's blog but I've modified some of the lines. These are the post used: 
 * [Install Ubuntu in chroot on Android without Linux Deploy](https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/)
 * [How to use Termux X11 - The X server on Android phone](https://ivonblog.com/en-us/posts/termux-x11/)
  
@@ -58,24 +54,22 @@ mkdir /data/local/tmp/chrootubuntu
 cd /data/local/tmp/chrootubuntu
 ```
 
-3. Download [Ubuntu 22.0.4 LTS](https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/) rootfs: 
+3. Download [Ubuntu 24.04 LTS](https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/) rootfs: 
 ```
-curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
+curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.3-base-arm64.tar.gz -o ubuntu.tar.gz
 
 ```
 
-4. Unzip the downloaded file and create some folders to mount the sdcard
+4. Extract the downloaded file and create sdcard folder
 ```
 tar xpvf ubuntu.tar.gz --numeric-owner
-
 mkdir sdcard
-mkdir dev/shm
 ```
 
-5. Create a start script: 
+5. Create startup script: 
 ```
-cd ../
-vi start.sh
+cd ..
+vi start_ubuntu.sh
 ```
 Copy and paste the following: 
 ```
@@ -93,6 +87,7 @@ busybox mount --bind /proc $UBUNTUPATH/proc
 busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
 
 # /dev/shm for Electron apps
+mkdir -p $UBUNTUPATH/dev/shm
 busybox mount -t tmpfs -o size=256M tmpfs $UBUNTUPATH/dev/shm
 
 # Mount sdcard
@@ -104,11 +99,11 @@ busybox chroot $UBUNTUPATH /bin/su - root
 
 6. Make the script executable and run it: 
 ```
-chmod +x start.sh
-sh start.sh
+chmod +x start_ubuntu.sh
+sh start_ubuntu.sh
 ```
 
-7. The prompt will change to `root@localhost`. If you need to return to Termux just write `exit`. Let's execute some fixes: 
+7. The prompt will change to `root@localhost`. If you need to return to Termux just write `exit`. Let's perform some fixes: 
 ```
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "127.0.0.1 localhost" > /etc/hosts
@@ -119,18 +114,18 @@ groupadd -g 1003 aid_graphics
 usermod -g 3003 -G 3003,3004 -a _apt
 usermod -G 3003 -a root
 
-apt update
-apt upgrade
+apt update && apt upgrade
 
 apt install nano vim net-tools sudo git
 ```
 
-8. Setup timezone: 
+8. Set timezone: 
+The interactive shell should prompt you to select your timezone if it doesn't run this: 
 ```
-ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
+dpkg-reconfigure tzdata
 ```
 
-9. Create a new user called `droidmaster` (or the name you prefer)
+9. Create a new user called `droidmaster` (or the name you prefer): 
 ```
 groupadd storage
 groupadd wheel
@@ -140,14 +135,18 @@ passwd droidmaster
 
 10. Add the created user to sudoers file to have superuser privileges: 
 ```
-nano /etc/sudoers
+visudo
 ```
-Add this line: 
+Add this line (replace `droidmaster` with your prefered name): 
 ```
 droidmaster ALL=(ALL:ALL) ALL
 ```
 
 11. Switch to the created user: 
+```
+su - droidmaster
+```
+And generate locales: 
 ```
 sudo apt install locales
 sudo locale-gen en_US.UTF-8
@@ -163,11 +162,9 @@ sudo apt install xubuntu-desktop
 sudo apt install kubuntu-desktop
 ```
 
-> [!NOTE]
-> This step is for Ubuntu only
 13. Disable Snapd (it can't be used on Termux): 
 ```
-apt-get autopurge snapd
+sudo apt-get autopurge snapd
 
 cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
 # To prevent repository packages from triggering the installation of Snap,
@@ -179,42 +176,33 @@ Pin-Priority: -10
 EOF
 ```
 
-14. Exit chroot and modify  the `start.sh` script created on step `5`: 
+14. Exit chroot and modify the `start_ubuntu.sh` script created on step `5`: 
 ```
-nano /data/local/tmp/start.sh
+vi /data/local/tmp/start_ubuntu.sh
 ```
-Change the last line `busybox chroot $UBUNTUPATH /bin/su - root` to this line: 
+ Comment the last line `busybox chroot $UBUNTUPATH /bin/su - root` and write the following line under it: 
 ```
-busybox chroot $UBUNTUPATH /bin/su - user -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
+busybox chroot $UBUNTUPATH /bin/su - droidmaster -c "export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 && dbus-launch --exit-with-session startxfce4"
 ```
-If you installed other Desktop Environment you need to change the `startxfce4` part. For example for KDE Plasma it should be `startplasma-x11`.
+If you've installed a different Desktop Environment you need to replace `startxfce4`. For example for KDE Plasma you should replace `startxfce4` with `startplasma-x11`.
 
-15. Let's run the Desktop Environment. Exit chroot environment and copy the following commands on Termux (you can close everything an reopen Termux to be sure you are outside chroot). 
+15. Let's run the Desktop Environment. Exit chroot environment and download the script with wget on Termux (you can close everything and reopen Termux to be sure you are outside chroot). 
 ```
-XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
-sudo busybox mount --bind $PREFIX/tmp /data/local/tmp/chrootubuntu/tmp
+wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/ubuntu/startxfce4_chrootubuntu.sh
 
-sh /data/local/tmp/start.sh
+chmod +x startxfce4_chrootubuntu.sh
+./startxfce4_chrootubuntu.sh
 ```
-
-Now you are inside chroot. Execute this: 
-```
-sudo chmod -R 777 /tmp
-export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713
-dbus-launch --exit-with-session startxfce4 &
-```
-
-16. Open Termux X11 and check that you can use the desktop environment. 
 </details>
 
 ---  
 <br>
 
-## ⬇️ Download Ubuntu Chroot <a name=distros-chroot></a>
+## ⬇️ Download Ubuntu RootFS <a name=distros-chroot></a>
 
-* Download Ubuntu 22.04 rootfs: 
+* Download Ubuntu 24.04 rootfs: 
 ```
-curl https://cdimage.ubuntu.com/ubuntu-base/releases/22.04/release/ubuntu-base-22.04-base-arm64.tar.gz --output ubuntu.tar.gz
+curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.3-base-arm64.tar.gz -o ubuntu.tar.gz
 ```
 
 ---  
