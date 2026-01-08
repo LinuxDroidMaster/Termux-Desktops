@@ -19,4 +19,7 @@ busybox mount -t tmpfs -o size=256M tmpfs $UBUNTUPATH/dev/shm
 busybox mount --bind /sdcard $UBUNTUPATH/sdcard
 
 # Chroot into Ubuntu
-busybox chroot $UBUNTUPATH /bin/su - root
+#busybox chroot $UBUNTUPATH /bin/su - root
+busybox chroot $UBUNTUPATH /bin/su - droidmaster -c \
+"export DISPLAY=:0 PULSE_SERVER=tcp:127.0.0.1:4713 \
+&& dbus-launch --exit-with-session startxfce4"

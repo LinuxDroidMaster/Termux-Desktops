@@ -17,7 +17,7 @@
 <br>
 
 > [!NOTE]  
-> All the process is described in this(outdated) [video](https://www.youtube.com/watch?v=rYJaG0uFtdc)
+> All the process is described in this [video](https://www.youtube.com/watch?v=rYJaG0uFtdc) (outdated).
 
 ## 🏁 First steps <a name=first-steps-chroot></a>
 
@@ -119,8 +119,7 @@ apt update && apt upgrade
 apt install nano vim net-tools sudo git
 ```
 
-8. Set timezone: 
-The interactive shell should prompt you to select your timezone if it doesn't run this: 
+8. Set timezone the interactive shell should prompt you to select your timezone if it doesn't run this: 
 ```
 dpkg-reconfigure tzdata
 ```
@@ -186,7 +185,7 @@ busybox chroot $UBUNTUPATH /bin/su - droidmaster -c "export DISPLAY=:0 PULSE_SER
 ```
 If you've installed a different Desktop Environment you need to replace `startxfce4`. For example for KDE Plasma you should replace `startxfce4` with `startplasma-x11`.
 
-15. Let's run the Desktop Environment. Exit chroot environment and download the script with wget on Termux (you can close everything and reopen Termux to be sure you are outside chroot). 
+15. Let's run the Desktop Environment. Exit chroot environment and download the script with wget and start it on Termux (you can close everything and reopen Termux to be sure you are outside chroot). 
 ```
 wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/chroot/ubuntu/startxfce4_chrootubuntu.sh
 
@@ -206,6 +205,7 @@ curl https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-2
 ```
 
 ---  
+A note if you want to use firefox use the apt repository it's recommended [Firefox](https://support.mozilla.org/en-US/kb/install-firefox-linux).
 <br>
 
 ## 🎨 Customizations (Nerdfonts, XFCE4 terminal color palettes, etc) <a name=customizations-chroot></a>
