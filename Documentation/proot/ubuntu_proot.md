@@ -15,16 +15,13 @@
 ## 🏁 First steps <a name=first-steps-ubuntu-proot></a>
 
 > [!NOTE]  
-> All the process is described in more detail in this [video](https://www.youtube.com/watch?v=_vxhzSG2zVQ).
+> All the process is described in more detail in this [video](https://www.youtube.com/watch?v=_vxhzSG2zVQ) (ourdated).
 
 First you need to install the following packages in Termux: 
 ```
-pkg update
-pkg install x11-repo
-pkg install termux-x11-nightly
-pkg install pulseaudio
-pkg install proot-distro
-pkg install wget
+pkg update \
+&& pkg install x11-repo \
+&& pkg install termux-x11-nightly pulseaudio proot-distro wget
 ```
 
 Then install Ubuntu and login once it finishes: 
@@ -35,10 +32,9 @@ proot-distro login ubuntu
 
 Update repositories and install any package you want: 
 ```
-apt update 
-apt upgrade
+apt update && apt upgrade
 
-apt install sudo nano adduser -y
+apt install sudo vim -y
 ```
 
 ---  
