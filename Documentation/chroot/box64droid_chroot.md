@@ -3,6 +3,9 @@
 
 # 📚 Index
 
+> [!WARNING]
+> Box64Droid is no longer being worked on! it's recommended now to either use Mobox or Winlator instead!
+> 
 ## CHROOT (🏎️ BOX64DROID)
 * 🏁 [First steps](#first-steps-chroot)
 * 💻 [Setting the graphical desktop (XFCE4)](#box64droid-chroot)
