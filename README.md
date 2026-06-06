@@ -131,3 +131,21 @@ Click on the different icons to see how you can install the distribution of your
 
 ## 💻 How to install Termux Native Desktop <a name=termux-native></a>
 ### You have all the information to install a native Termux Desktop and all the available apps [here](/Documentation/native/termux_native.md).
+
+## ❓ QNA (Questions and their answers)
+# Which one do I use?
+
+To answer your question:
+- Use Native Desktops if you want really fast performance, or you have a shoddy/potato device.
+- Use Chroot Desktops if you are rooted, want fast performance, and have a device that isn't a pain to root.
+- Use Proot Desktops for everything else.
+
+# Is it worth it?
+
+It depends. If you just want to run desktop games, you're better off using a Winlator configuration or run the
+Android version if possible. If you want to run Blender or other desktop only APPS, This is the right choice if
+you pick Proot or Chroot desktops. If you want to shock somebody with a cool thing, What are you doing?
+
+# Where are most of the contributors from?
+
+Ususally either European or Asian.
