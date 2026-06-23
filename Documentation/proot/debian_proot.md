@@ -60,7 +60,7 @@ adduser droidmaster
 ```
 3. Give the user sudo privileges
 ```
-sudo visudo
+visudo
 
 # Add the following line to the file
 droidmaster ALL=(ALL:ALL) ALL

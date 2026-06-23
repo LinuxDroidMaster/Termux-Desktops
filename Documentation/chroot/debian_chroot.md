@@ -192,7 +192,7 @@ passwd droidmaster
 
 9. Add the created user to sudoers file to have superuser privileges: 
 ```
-sudo visudo
+visudo
 ```
 Add this line: 
 ```

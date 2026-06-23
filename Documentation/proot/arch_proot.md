@@ -67,7 +67,7 @@ passwd droidmaster
 ```
 * Give sudo permissions to the user
 ```
-sudo visudo
+visudo
 ```
 ```
 # Paste the following line
@@ -107,7 +107,7 @@ passwd droidmaster
 ```
 * Give sudo permissions to the user
 ```
-sudo visudo
+visudo
 ```
 ```
 # Paste the following line

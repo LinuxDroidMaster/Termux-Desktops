@@ -98,7 +98,7 @@ adduser droidmaster
 ```
 3. Give the user sudo privileges
 ```
-sudo visudo
+visudo
 
 # Add the following line to the file
 droidmaster ALL=(ALL:ALL) ALL
@@ -686,7 +686,7 @@ passwd droidmaster
 
 10. Add the created user to sudoers file to have superuser privileges: 
 ```
-sudo visudo
+visudo
 ```
 Add this line: 
 ```

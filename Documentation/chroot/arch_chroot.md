@@ -159,7 +159,7 @@ passwd droidmaster
 
 - Add the user to `sudoers` file so you can execute `sudo` commands
 ```
-sudo visudo
+visudo
 ```
 ```
 # Paste this 

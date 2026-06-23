@@ -52,7 +52,7 @@ xbps-install lxde xfce4 xfce4-terminal
 useradd droidmaster
 passwd droidmaster
 
-sudo visudo
+visudo
 
 # Add the following line to the sudoers file
 droidmaster All=(ALL:ALL) ALL
