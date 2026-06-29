@@ -60,7 +60,7 @@ adduser droidmaster
 ```
 3. Give the user sudo privileges
 ```
-nano /etc/sudoers
+visudo
 
 # Add the following line to the file
 droidmaster ALL=(ALL:ALL) ALL
