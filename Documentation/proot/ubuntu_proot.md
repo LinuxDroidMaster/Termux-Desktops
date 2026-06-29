@@ -89,7 +89,20 @@ adduser droidmaster
 su - droidmaster
 ```
 
-3. Install the desktop environment:
+3. Disable snapd once before installing a desktop environment. It cannot be used inside Termux without a specialized setup.
+
+```
+cat <<EOF | sudo tee /etc/apt/preferences.d/nosnap.pref
+# To prevent repository packages from triggering the installation of Snap,
+# this file forbids snapd from being installed by APT.
+# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
+```
+
+4. Install the desktop environment:
 
 * XFCE4
 
@@ -97,56 +110,16 @@ su - droidmaster
 apt install xubuntu-desktop -y
 ```
 
-* Remove snap it cannot be used inside termux without a specialized setup.
-
-```
-cat <<EOF | tee /etc/apt/preferences.d/nosnap.pref
-# To prevent repository packages from triggering the installation of Snap,
-# this file forbids snapd from being installed by APT.
-# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
-Package: snapd
-Pin: release a=*
-Pin-Priority: -10
-EOF
-```
-
-
 * KDE PLASMA
 
 ```
 apt install kubuntu-desktop -y
 ```
 
-* Remove snap it cannot be used inside termux without a specialized setup.
-
-```
-cat <<EOF | tee /etc/apt/preferences.d/nosnap.pref
-# To prevent repository packages from triggering the installation of Snap,
-# this file forbids snapd from being installed by APT.
-# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
-Package: snapd
-Pin: release a=*
-Pin-Priority: -10
-EOF
-```
-
 * CINNAMON
 
 ```
 apt install ubuntucinnamon-desktop
-```
-
-* Remove snap it cannot be used inside termux without a specialized setup.
-
-```
-cat <<EOF | tee /etc/apt/preferences.d/nosnap.pref
-# To prevent repository packages from triggering the installation of Snap,
-# this file forbids snapd from being installed by APT.
-# For more information: https://linuxmint-user-guide.readthedocs.io/en/latest/snap.html
-Package: snapd
-Pin: release a=*
-Pin-Priority: -10
-EOF
 ```
 
 ## 🦊 Install Firefox
