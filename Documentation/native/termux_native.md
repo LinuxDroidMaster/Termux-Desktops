@@ -214,7 +214,9 @@ If programs or games are too slow, follow the [hardware acceleration guide](../H
 ## Troubleshooting and fixes <a name=troubleshoot></a> 
 
 ### Termux X11 randomly getting killed/shutdown
-You need to disable Phantom Processes using [this guide](https://github.com/EDLLT/TermuxDisablePhantomProcess)
+You need to disable Phantom Processes.
+For Android 13-, follow [this guide](https://github.com/EDLLT/TermuxDisablePhantomProcess)
+For Android 14+, go to developer settings, scroll down and turn on the toggle labeled "Disable child process restrictions".
 
 If Termux X11 STILL abruptly gets killed even after disabling Phantom Processes then apply this to both the **Termux app and Termux X11**
 https://dontkillmyapp.com/
