@@ -371,7 +371,7 @@ Other tests I did:
 ## Turnip
 * Install
   ```
-  apt install mesa-vulkan-icd-freedreno-dri3
+  apt install mesa-vulkan-icd-freedreno
   ```
 * To run programs with turnip: 
   ```
